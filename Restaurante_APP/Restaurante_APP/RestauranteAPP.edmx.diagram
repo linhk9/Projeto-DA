@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="192c2600f8ac4f5e95967a1abea6c8e6" Name="Diagram1" ZoomLevel="97" >
+        <EntityTypeShape EntityType="RestauranteAPP.Pessoa" Width="1.5" PointX="2.625" PointY="0.75" />
+        <EntityTypeShape EntityType="RestauranteAPP.Restaurante" Width="1.5" PointX="7.125" PointY="0.75" />
+        <EntityTypeShape EntityType="RestauranteAPP.Morada" Width="1.375" PointX="5" PointY="0.5" />
+        <AssociationConnector Association="RestauranteAPP.PessoaMorada" />
+        <EntityTypeShape EntityType="RestauranteAPP.Cliente" Width="1.5" PointX="0.5" PointY="3.125" />
+        <InheritanceConnector EntityType="RestauranteAPP.Cliente" />
+        <EntityTypeShape EntityType="RestauranteAPP.Trabalhador" Width="1.5" PointX="2.75" PointY="3.125" />
+        <InheritanceConnector EntityType="RestauranteAPP.Trabalhador" />
+        <AssociationConnector Association="RestauranteAPP.TrabalhadorRestaurante" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RestauranteAPP.ItemMenu" Width="1.5" PointX="8.125" PointY="3.125" />
+        <AssociationConnector Association="RestauranteAPP.ItemMenuRestaurante" />
+        <AssociationConnector Association="RestauranteAPP.RestauranteMorada" />
+        <EntityTypeShape EntityType="RestauranteAPP.Pedido" Width="1.5" PointX="3.75" PointY="5.25" />
+        <AssociationConnector Association="RestauranteAPP.PedidoTrabalhador" />
+        <AssociationConnector Association="RestauranteAPP.PedidoCliente" />
+        <AssociationConnector Association="RestauranteAPP.PedidoRestaurante" />
+        <AssociationConnector Association="RestauranteAPP.PedidoItemMenu" />
+        <EntityTypeShape EntityType="RestauranteAPP.EstadoPedido" Width="1.5" PointX="5.875" PointY="5.625" />
+        <AssociationConnector Association="RestauranteAPP.EstadoPedidoPedido" />
+        <EntityTypeShape EntityType="RestauranteAPP.Pagamento" Width="1.5" PointX="1.75" PointY="5.625" />
+        <EntityTypeShape EntityType="RestauranteAPP.MetodoPagamento" Width="1.5" PointX="1.75" PointY="7.625" />
+        <AssociationConnector Association="RestauranteAPP.PagamentoPedido" />
+        <AssociationConnector Association="RestauranteAPP.PagamentoMetodoPagamento" />
+        <EntityTypeShape EntityType="RestauranteAPP.Categoria" Width="1.5" PointX="8" PointY="6.875" />
+        <AssociationConnector Association="RestauranteAPP.CategoriaItemMenu" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
