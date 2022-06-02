@@ -76,8 +76,26 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>RestauranteAPP.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClientGestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientGestForm.Designer.cs">
+      <DependentUpon>ClientGestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstadoPedido.cs">
       <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GestRest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestRest.Designer.cs">
+      <DependentUpon>GestRest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="RestGestForm.cs">
       <SubType>Form</SubType>
@@ -121,6 +139,15 @@
     <Compile Include="Trabalhador.cs">
       <DependentUpon>RestauranteAPP.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClientGestForm.resx">
+      <DependentUpon>ClientGestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestRest.resx">
+      <DependentUpon>GestRest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

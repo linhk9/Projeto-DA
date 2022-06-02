@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RestGestForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.acessoRapidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gesstãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestaoGlobalDeRestaurantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestaoDeClientesButton = new System.Windows.Forms.Button();
             this.gestaoGlobalDeRestaurantesButton = new System.Windows.Forms.Button();
             this.pedidosButton = new System.Windows.Forms.Button();
             this.RestaurantesListBox = new System.Windows.Forms.ListBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.acessoRapidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
-            this.gesstãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestaoGlobalDeRestaurantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,40 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // acessoRapidoToolStripMenuItem
+            // 
+            this.acessoRapidoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gesstãoDeClientesToolStripMenuItem,
+            this.gestaoGlobalDeRestaurantesToolStripMenuItem,
+            this.pedidosToolStripMenuItem});
+            this.acessoRapidoToolStripMenuItem.Name = "acessoRapidoToolStripMenuItem";
+            this.acessoRapidoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.acessoRapidoToolStripMenuItem.Text = "Acesso Rápido";
+            // 
+            // gesstãoDeClientesToolStripMenuItem
+            // 
+            this.gesstãoDeClientesToolStripMenuItem.Name = "gesstãoDeClientesToolStripMenuItem";
+            this.gesstãoDeClientesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
+            this.gesstãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.gesstãoDeClientesToolStripMenuItem.Text = "Gesstão de Clientes";
+            this.gesstãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.gesstãoDeClientesToolStripMenuItem_Click);
+            // 
+            // gestaoGlobalDeRestaurantesToolStripMenuItem
+            // 
+            this.gestaoGlobalDeRestaurantesToolStripMenuItem.Name = "gestaoGlobalDeRestaurantesToolStripMenuItem";
+            this.gestaoGlobalDeRestaurantesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
+            this.gestaoGlobalDeRestaurantesToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.gestaoGlobalDeRestaurantesToolStripMenuItem.Text = "Gestão Global de Restaurantes";
+            this.gestaoGlobalDeRestaurantesToolStripMenuItem.Click += new System.EventHandler(this.gestaoGlobalDeRestaurantesToolStripMenuItem_Click);
+            // 
+            // pedidosToolStripMenuItem
+            // 
+            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
+            this.pedidosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.pedidosToolStripMenuItem.Text = "Pedidos";
+            this.pedidosToolStripMenuItem.Click += new System.EventHandler(this.pedidosToolStripMenuItem_Click);
+            // 
             // gestaoDeClientesButton
             // 
             this.gestaoDeClientesButton.Location = new System.Drawing.Point(12, 27);
@@ -61,6 +96,7 @@
             this.gestaoDeClientesButton.TabIndex = 1;
             this.gestaoDeClientesButton.Text = "Gestão de Clientes";
             this.gestaoDeClientesButton.UseVisualStyleBackColor = true;
+            this.gestaoDeClientesButton.Click += new System.EventHandler(this.gestaoDeClientesButton_Click);
             // 
             // gestaoGlobalDeRestaurantesButton
             // 
@@ -70,6 +106,7 @@
             this.gestaoGlobalDeRestaurantesButton.TabIndex = 2;
             this.gestaoGlobalDeRestaurantesButton.Text = "Gestão Global de Restaurantes";
             this.gestaoGlobalDeRestaurantesButton.UseVisualStyleBackColor = true;
+            this.gestaoGlobalDeRestaurantesButton.Click += new System.EventHandler(this.gestaoGlobalDeRestaurantesButton_Click);
             // 
             // pedidosButton
             // 
@@ -79,6 +116,7 @@
             this.pedidosButton.TabIndex = 3;
             this.pedidosButton.Text = "Pedidos";
             this.pedidosButton.UseVisualStyleBackColor = true;
+            this.pedidosButton.Click += new System.EventHandler(this.pedidosButton_Click);
             // 
             // RestaurantesListBox
             // 
@@ -93,16 +131,6 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // acessoRapidoToolStripMenuItem
-            // 
-            this.acessoRapidoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gesstãoDeClientesToolStripMenuItem,
-            this.gestaoGlobalDeRestaurantesToolStripMenuItem,
-            this.pedidosToolStripMenuItem});
-            this.acessoRapidoToolStripMenuItem.Name = "acessoRapidoToolStripMenuItem";
-            this.acessoRapidoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.acessoRapidoToolStripMenuItem.Text = "Acesso Rápido";
-            // 
             // entityCommand1
             // 
             this.entityCommand1.CommandTimeout = 0;
@@ -110,27 +138,6 @@
             this.entityCommand1.Connection = null;
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
-            // 
-            // gesstãoDeClientesToolStripMenuItem
-            // 
-            this.gesstãoDeClientesToolStripMenuItem.Name = "gesstãoDeClientesToolStripMenuItem";
-            this.gesstãoDeClientesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
-            this.gesstãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
-            this.gesstãoDeClientesToolStripMenuItem.Text = "Gesstão de Clientes";
-            // 
-            // gestaoGlobalDeRestaurantesToolStripMenuItem
-            // 
-            this.gestaoGlobalDeRestaurantesToolStripMenuItem.Name = "gestaoGlobalDeRestaurantesToolStripMenuItem";
-            this.gestaoGlobalDeRestaurantesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
-            this.gestaoGlobalDeRestaurantesToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
-            this.gestaoGlobalDeRestaurantesToolStripMenuItem.Text = "Gestão Global de Restaurantes";
-            // 
-            // pedidosToolStripMenuItem
-            // 
-            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
-            this.pedidosToolStripMenuItem.Text = "Pedidos";
             // 
             // RestGestForm
             // 
@@ -142,7 +149,10 @@
             this.Controls.Add(this.gestaoGlobalDeRestaurantesButton);
             this.Controls.Add(this.gestaoDeClientesButton);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "RestGestForm";
             this.Text = "RestGest";
             this.menuStrip1.ResumeLayout(false);

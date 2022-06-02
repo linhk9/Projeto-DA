@@ -16,5 +16,41 @@ namespace Restaurante_APP
         {
             InitializeComponent();
         }
+
+        private void gestaoDeClientesButton_Click(object sender, EventArgs e)
+        {
+            ClientGestForm ClientForm = new ClientGestForm();
+            ClientForm.ShowDialog();
+        }
+
+        private void gesstãoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClientGestForm ClientForm = new ClientGestForm();
+            ClientForm.ShowDialog();
+        }
+
+        private void gestaoGlobalDeRestaurantesButton_Click(object sender, EventArgs e)
+        {
+            GestRest RestForm = new GestRest();
+            RestForm.ShowDialog();
+        }
+
+        private void pedidosButton_Click(object sender, EventArgs e)
+        {
+            Pedidos PedidosForm = new Pedidos();
+            PedidosForm.ShowDialog();
+        }
+
+        private void gestaoGlobalDeRestaurantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestRest RestForm = new GestRest();
+            RestForm.ShowDialog();
+        }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pedidos PedidosForm = new Pedidos();
+            PedidosForm.ShowDialog();
+        }
     }
 }
