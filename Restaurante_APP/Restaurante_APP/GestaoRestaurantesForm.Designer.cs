@@ -289,6 +289,7 @@
             this.btn_RegistarRestaurante.TabIndex = 0;
             this.btn_RegistarRestaurante.Text = "Registar";
             this.btn_RegistarRestaurante.UseVisualStyleBackColor = true;
+            this.btn_RegistarRestaurante.Click += new System.EventHandler(this.Btn_RegistarRestaurante_Click);
             // 
             // groupBox_AlterarRestaurante
             // 
@@ -318,6 +319,7 @@
             this.btn_AlterarRestaurante.TabIndex = 21;
             this.btn_AlterarRestaurante.Text = "Alterar";
             this.btn_AlterarRestaurante.UseVisualStyleBackColor = true;
+            this.btn_AlterarRestaurante.Click += new System.EventHandler(this.Btn_AlterarRestaurante_Click);
             // 
             // textBoxAlterar_Pais
             // 
@@ -429,7 +431,7 @@
             this.btnAbrirRestaurante.TabIndex = 2;
             this.btnAbrirRestaurante.Text = "Abrir restaurante";
             this.btnAbrirRestaurante.UseVisualStyleBackColor = true;
-            this.btnAbrirRestaurante.Click += new System.EventHandler(this.btnAbrirRestaurante_Click);
+            this.btnAbrirRestaurante.Click += new System.EventHandler(this.BtnAbrirRestaurante_Click);
             // 
             // btn_ApagarRestaurante
             // 
@@ -577,9 +579,9 @@
             // 
             // btnCategoria_Alterar
             // 
-            this.btnCategoria_Alterar.Location = new System.Drawing.Point(17, 168);
+            this.btnCategoria_Alterar.Location = new System.Drawing.Point(10, 168);
             this.btnCategoria_Alterar.Name = "btnCategoria_Alterar";
-            this.btnCategoria_Alterar.Size = new System.Drawing.Size(332, 26);
+            this.btnCategoria_Alterar.Size = new System.Drawing.Size(339, 26);
             this.btnCategoria_Alterar.TabIndex = 21;
             this.btnCategoria_Alterar.Text = "Alterar";
             this.btnCategoria_Alterar.UseVisualStyleBackColor = true;
@@ -771,9 +773,9 @@
             // 
             // btnMP_Aterar
             // 
-            this.btnMP_Aterar.Location = new System.Drawing.Point(17, 168);
+            this.btnMP_Aterar.Location = new System.Drawing.Point(6, 168);
             this.btnMP_Aterar.Name = "btnMP_Aterar";
-            this.btnMP_Aterar.Size = new System.Drawing.Size(332, 26);
+            this.btnMP_Aterar.Size = new System.Drawing.Size(343, 26);
             this.btnMP_Aterar.TabIndex = 21;
             this.btnMP_Aterar.Text = "Alterar";
             this.btnMP_Aterar.UseVisualStyleBackColor = true;

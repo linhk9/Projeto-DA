@@ -237,11 +237,15 @@ namespace Restaurante_APP
             }
         }
 
-        private void btnAbrirRestaurante_Click(object sender, EventArgs e)
+        private void BtnAbrirRestaurante_Click(object sender, EventArgs e)
         {
-            Restaurante restauranteselected = (Restaurante)listBox_Restaurantes.SelectedItem;
-            GestRest GestaoRestauranteForm = new GestRest(restauranteselected);
-            GestaoRestauranteForm.ShowDialog();
+            if (listBox_Restaurantes.Items.Count > 0)
+            {
+                Restaurante restauranteselected = (Restaurante)listBox_Restaurantes.SelectedItem;
+                GestRest GestaoRestauranteForm = new GestRest(restauranteselected);
+                GestaoRestauranteForm.ShowDialog();
+            }
+            
         }
 
     }

@@ -14,10 +14,17 @@ namespace Restaurante_APP
     {
         public static RestauranteAPPContainer restauranteAPP;
         public static Restaurante restaurante;
+
         public GestRest(Restaurante restauranteselected)
         {
             InitializeComponent();
             restaurante = restauranteselected;
+        }
+
+        private void GestRest_Load(object sender, EventArgs e)
+        {
+            restauranteAPP = new RestauranteAPPContainer();
+            LerDadosTrabalhadores();
         }
 
         private void LerDadosTrabalhadores()
@@ -30,18 +37,19 @@ namespace Restaurante_APP
             return String.IsNullOrEmpty(texto);
         }
 
-
-        private void btn_RegistarTrabalhador_Click(object sender, EventArgs e)
+        private void Btn_RegistarTrabalhador_Click(object sender, EventArgs e)
         {
             if (!(VerificarTexto(textBoxAdd_Nome.Text) && VerificarTexto(textBoxAdd_Rua.Text) && VerificarTexto(textBoxAdd_CodPostal.Text) && VerificarTexto(textBoxAdd_Cidade.Text) && VerificarTexto(textBoxAdd_Pais.Text) && VerificarTexto(txtAddPosicao.Text) && VerificarTexto(txtAddPosicao.Text)))
             {
                 Pessoa pessoa = new Pessoa
                 {
-                    Nome = textBoxAdd_Nome.Text
+                    Nome = textBoxAdd_Nome.Text,
+                    Telemovel = Int32.Parse(txtAddTelemovel.Text)
                 };
 
                 Pessoa_Trabalhador trabalhador = new Pessoa_Trabalhador
                 {
+                    Pessoa = pessoa,
                     Posicao = txtAddPosicao.Text,
                     Restaurante_IdRestaurante = restaurante.IdRestaurante,
                     Salario = double.Parse(txtAddSalario.Text)
@@ -55,10 +63,9 @@ namespace Restaurante_APP
                     CodPostal = textBoxAdd_CodPostal.Text
                 };
 
-                restaurante.MoradaSet = morada;
+                pessoa.MoradaSet = morada;
 
                 restauranteAPP.Pessoa_Trabalhador.Add(trabalhador);
-                restauranteAPP.Restaurante.Add(restaurante);
                 restauranteAPP.MoradaSet.Add(morada);
                 restauranteAPP.SaveChanges();
                 LerDadosTrabalhadores();
@@ -74,10 +81,11 @@ namespace Restaurante_APP
             }
         }
 
-        private void ListBox_Restaurantes_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBox_Trabalhadores_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pessoa_Trabalhador trabalhador = (Pessoa_Trabalhador)listBox_Trabalhadores.SelectedItem;
             textBoxAlterar_Nome.Text = trabalhador.Pessoa.Nome;
+            txtAlterarTelemovel.Text = trabalhador.Pessoa.Telemovel.ToString();
             txtAlterarPosicao.Text = trabalhador.Posicao;
             txtAlterarSalario.Text =  trabalhador.Salario.ToString();
             textBoxAlterar_Rua.Text = trabalhador.Pessoa.MoradaSet.Rua;
@@ -86,12 +94,13 @@ namespace Restaurante_APP
             textBoxAlterar_Pais.Text = trabalhador.Pessoa.MoradaSet.Pais;
         }
 
-        private void btn_AlterarTrabalhador_Click(object sender, EventArgs e)
+        private void Btn_AlterarTrabalhador_Click(object sender, EventArgs e)
         {
-            if (!(VerificarTexto(textBoxAdd_Nome.Text) && VerificarTexto(textBoxAdd_Rua.Text) && VerificarTexto(textBoxAdd_CodPostal.Text) && VerificarTexto(textBoxAdd_Cidade.Text) && VerificarTexto(textBoxAdd_Pais.Text) && VerificarTexto(txtAddPosicao.Text) && VerificarTexto(txtAddPosicao.Text)))
+            if (!(VerificarTexto(textBoxAlterar_Nome.Text) && VerificarTexto(textBoxAlterar_Rua.Text) && VerificarTexto(textBoxAlterar_CodPostal.Text) && VerificarTexto(textBoxAlterar_Cidade.Text) && VerificarTexto(textBoxAlterar_Pais.Text) && VerificarTexto(txtAlterarPosicao.Text) && VerificarTexto(txtAlterarTelemovel.Text) && VerificarTexto(txtAlterarSalario.Text)))
             {
                 Pessoa_Trabalhador trabalhador = (Pessoa_Trabalhador)listBox_Trabalhadores.SelectedItem;
                 trabalhador.Pessoa.Nome = textBoxAlterar_Nome.Text;
+                trabalhador.Pessoa.Telemovel = Int32.Parse(txtAlterarTelemovel.Text);
                 trabalhador.Posicao = txtAlterarPosicao.Text;
                 trabalhador.Salario = double.Parse(txtAlterarSalario.Text);
                 trabalhador.Pessoa.MoradaSet.Rua = textBoxAlterar_Rua.Text;
@@ -108,10 +117,11 @@ namespace Restaurante_APP
             }
         }
 
-        private void btn_ApagarTrabalhador_Click(object sender, EventArgs e)
+        private void Btn_ApagarTrabalhador_Click(object sender, EventArgs e)
         {
             Pessoa_Trabalhador trabalhador = (Pessoa_Trabalhador)listBox_Trabalhadores.SelectedItem;
 
+            restauranteAPP.Pessoa.Remove(trabalhador.Pessoa);
             restauranteAPP.Pessoa_Trabalhador.Remove(trabalhador);
             restauranteAPP.SaveChanges();
             LerDadosTrabalhadores();

@@ -40,6 +40,7 @@ namespace Restaurante_APP
         {
             Pessoa_Cliente cliente = (Pessoa_Cliente)listBox_Clientes.SelectedItem;
 
+            restauranteAPP.Pessoa.Remove(cliente.Pessoa);
             restauranteAPP.Pessoa_Cliente.Remove(cliente);
             restauranteAPP.SaveChanges();
             LerDados();
