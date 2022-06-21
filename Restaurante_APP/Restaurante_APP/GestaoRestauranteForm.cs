@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +11,30 @@ using System.Windows.Forms;
 
 namespace Restaurante_APP
 {
-    public partial class GestRest : Form
+    public partial class GestaoRestauranteForm : MaterialForm
     {
+        readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         public static RestauranteAPPContainer restauranteAPP;
         public static Restaurante restaurante;
 
-        public GestRest(Restaurante restauranteselected)
+        public GestaoRestauranteForm(Restaurante restauranteselected)
         {
             InitializeComponent();
+            materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.EnforceBackcolorOnAllComponents = true;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Indigo200, MaterialSkin.TextShade.WHITE);
             restaurante = restauranteselected;
         }
 
-        private void GestRest_Load(object sender, EventArgs e)
+        private void GestaoRestaurante_Load(object sender, EventArgs e)
         {
             restauranteAPP = new RestauranteAPPContainer();
             LerDadosTrabalhadores();
+            LerDadosPedidos();
+            LerDadosMenus();
+            LerDadosMenusRestaurante();
         }
 
         private void LerDadosTrabalhadores()
@@ -38,12 +48,12 @@ namespace Restaurante_APP
             listBoxPedidos.Refresh();
         }
 
-        private void LerDadosMenus()
+        private void LerDadosMenusRestaurante()
         {
             listboxMenusIndividual.DataSource = restaurante.ItemMenuSet.OfType<ItemMenuSet>().ToList();
             listboxMenusIndividual.Refresh();
         }
-        private void LerDadosMenustodos()
+        private void LerDadosMenus()
         {
             comboBoxMenus.DataSource = restauranteAPP.ItemMenuSet.OfType<ItemMenuSet>().ToList();
             comboBoxMenus.Refresh();
@@ -144,14 +154,35 @@ namespace Restaurante_APP
             LerDadosTrabalhadores();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnAddMenu_Click(object sender, EventArgs e)
         {
+            // TODO: Testar esta parte (é preciso fazer a form dos menus)
+            ItemMenuSet menu = (ItemMenuSet)comboBoxMenus.SelectedItem;
 
+            restaurante.ItemMenuSet.Add(menu);
+            restauranteAPP.SaveChanges();
+            LerDadosMenusRestaurante();
         }
 
-        private void listboxMenusIndividual_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnRemoverMenu_Click(object sender, EventArgs e)
         {
+            // TODO: Testar esta parte (é preciso fazer a form dos menus)
+            ItemMenuSet menu = (ItemMenuSet)listboxMenusIndividual.SelectedItem;
 
+            restauranteAPP.ItemMenuSet.Remove(menu);
+            restauranteAPP.SaveChanges();
+            LerDadosMenusRestaurante();
+        }
+
+        private void BtnPedido_Click(object sender, EventArgs e)
+        {
+            // TODO: Testar esta parte (é preciso fazer a form dos pedidos)
+            if (listBoxPedidos.Items.Count > 0)
+            {
+                PedidoSet pedidoSelected = (PedidoSet)listBoxPedidos.SelectedItem;
+                PedidosForm pedidosForm = new PedidosForm();
+                pedidosForm.ShowDialog();
+            }
         }
     }
 }

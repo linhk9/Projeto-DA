@@ -90,18 +90,18 @@
             this.groupBox_AlterarCliente.Controls.Add(this.labelAlterar_Telemovel);
             this.groupBox_AlterarCliente.Controls.Add(this.textBoxAlterar_Nome);
             this.groupBox_AlterarCliente.Controls.Add(this.labelAlterar_Nome);
-            this.groupBox_AlterarCliente.Location = new System.Drawing.Point(57, 305);
+            this.groupBox_AlterarCliente.Location = new System.Drawing.Point(51, 360);
             this.groupBox_AlterarCliente.Name = "groupBox_AlterarCliente";
-            this.groupBox_AlterarCliente.Size = new System.Drawing.Size(702, 156);
+            this.groupBox_AlterarCliente.Size = new System.Drawing.Size(702, 163);
             this.groupBox_AlterarCliente.TabIndex = 16;
             this.groupBox_AlterarCliente.TabStop = false;
             this.groupBox_AlterarCliente.Text = "Alterar Cliente";
             // 
             // btn_AlterarCliente
             // 
-            this.btn_AlterarCliente.Location = new System.Drawing.Point(349, 120);
+            this.btn_AlterarCliente.Location = new System.Drawing.Point(352, 117);
             this.btn_AlterarCliente.Name = "btn_AlterarCliente";
-            this.btn_AlterarCliente.Size = new System.Drawing.Size(332, 26);
+            this.btn_AlterarCliente.Size = new System.Drawing.Size(332, 40);
             this.btn_AlterarCliente.TabIndex = 21;
             this.btn_AlterarCliente.Text = "Alterar";
             this.btn_AlterarCliente.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             // textBoxAlterar_Cidade
             // 
             this.textBoxAlterar_Cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAlterar_Cidade.Location = new System.Drawing.Point(478, 59);
+            this.textBoxAlterar_Cidade.Location = new System.Drawing.Point(478, 53);
             this.textBoxAlterar_Cidade.Name = "textBoxAlterar_Cidade";
             this.textBoxAlterar_Cidade.Size = new System.Drawing.Size(203, 26);
             this.textBoxAlterar_Cidade.TabIndex = 16;
@@ -155,7 +155,7 @@
             // 
             this.labelAlterar_Cidade.AutoSize = true;
             this.labelAlterar_Cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterar_Cidade.Location = new System.Drawing.Point(348, 62);
+            this.labelAlterar_Cidade.Location = new System.Drawing.Point(348, 56);
             this.labelAlterar_Cidade.Name = "labelAlterar_Cidade";
             this.labelAlterar_Cidade.Size = new System.Drawing.Size(63, 20);
             this.labelAlterar_Cidade.TabIndex = 15;
@@ -164,7 +164,7 @@
             // textBoxAlterar_Rua
             // 
             this.textBoxAlterar_Rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAlterar_Rua.Location = new System.Drawing.Point(478, 91);
+            this.textBoxAlterar_Rua.Location = new System.Drawing.Point(478, 85);
             this.textBoxAlterar_Rua.Name = "textBoxAlterar_Rua";
             this.textBoxAlterar_Rua.Size = new System.Drawing.Size(203, 26);
             this.textBoxAlterar_Rua.TabIndex = 14;
@@ -182,7 +182,7 @@
             // textBoxAlterar_NumeroContribuinte
             // 
             this.textBoxAlterar_NumeroContribuinte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAlterar_NumeroContribuinte.Location = new System.Drawing.Point(478, 24);
+            this.textBoxAlterar_NumeroContribuinte.Location = new System.Drawing.Point(478, 19);
             this.textBoxAlterar_NumeroContribuinte.Name = "textBoxAlterar_NumeroContribuinte";
             this.textBoxAlterar_NumeroContribuinte.Size = new System.Drawing.Size(203, 26);
             this.textBoxAlterar_NumeroContribuinte.TabIndex = 12;
@@ -191,7 +191,7 @@
             // 
             this.labelAlterar_NumeroContribuinte.AutoSize = true;
             this.labelAlterar_NumeroContribuinte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterar_NumeroContribuinte.Location = new System.Drawing.Point(348, 27);
+            this.labelAlterar_NumeroContribuinte.Location = new System.Drawing.Point(348, 22);
             this.labelAlterar_NumeroContribuinte.Name = "labelAlterar_NumeroContribuinte";
             this.labelAlterar_NumeroContribuinte.Size = new System.Drawing.Size(124, 20);
             this.labelAlterar_NumeroContribuinte.TabIndex = 11;
@@ -237,9 +237,9 @@
             // 
             this.groupBox_ListaClientes.Controls.Add(this.btn_ApagarCliente);
             this.groupBox_ListaClientes.Controls.Add(this.listBox_Clientes);
-            this.groupBox_ListaClientes.Location = new System.Drawing.Point(373, 12);
+            this.groupBox_ListaClientes.Location = new System.Drawing.Point(367, 67);
             this.groupBox_ListaClientes.Name = "groupBox_ListaClientes";
-            this.groupBox_ListaClientes.Size = new System.Drawing.Size(424, 287);
+            this.groupBox_ListaClientes.Size = new System.Drawing.Size(425, 287);
             this.groupBox_ListaClientes.TabIndex = 15;
             this.groupBox_ListaClientes.TabStop = false;
             this.groupBox_ListaClientes.Text = "Lista de Clientes";
@@ -248,7 +248,7 @@
             // 
             this.btn_ApagarCliente.Location = new System.Drawing.Point(357, 19);
             this.btn_ApagarCliente.Name = "btn_ApagarCliente";
-            this.btn_ApagarCliente.Size = new System.Drawing.Size(58, 252);
+            this.btn_ApagarCliente.Size = new System.Drawing.Size(68, 252);
             this.btn_ApagarCliente.TabIndex = 1;
             this.btn_ApagarCliente.Text = "Apagar";
             this.btn_ApagarCliente.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@
             this.groupBox_RegistarCliente.Controls.Add(this.textBoxAdd_Nome);
             this.groupBox_RegistarCliente.Controls.Add(this.labelAdd_Nome);
             this.groupBox_RegistarCliente.Controls.Add(this.btn_RegistarCliente);
-            this.groupBox_RegistarCliente.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_RegistarCliente.Location = new System.Drawing.Point(6, 67);
             this.groupBox_RegistarCliente.Name = "groupBox_RegistarCliente";
             this.groupBox_RegistarCliente.Size = new System.Drawing.Size(355, 287);
             this.groupBox_RegistarCliente.TabIndex = 17;
@@ -444,9 +444,9 @@
             // 
             // btn_RegistarCliente
             // 
-            this.btn_RegistarCliente.Location = new System.Drawing.Point(6, 258);
+            this.btn_RegistarCliente.Location = new System.Drawing.Point(6, 254);
             this.btn_RegistarCliente.Name = "btn_RegistarCliente";
-            this.btn_RegistarCliente.Size = new System.Drawing.Size(333, 23);
+            this.btn_RegistarCliente.Size = new System.Drawing.Size(333, 27);
             this.btn_RegistarCliente.TabIndex = 0;
             this.btn_RegistarCliente.Text = "Registar";
             this.btn_RegistarCliente.UseVisualStyleBackColor = true;
@@ -456,7 +456,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 470);
+            this.ClientSize = new System.Drawing.Size(798, 529);
             this.Controls.Add(this.groupBox_RegistarCliente);
             this.Controls.Add(this.groupBox_AlterarCliente);
             this.Controls.Add(this.groupBox_ListaClientes);

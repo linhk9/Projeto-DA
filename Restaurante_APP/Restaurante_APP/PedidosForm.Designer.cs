@@ -1,6 +1,6 @@
 ﻿namespace Restaurante_APP
 {
-    partial class Pedidos
+    partial class PedidosForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pedidos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidosForm));
             this.SuspendLayout();
             // 
             // Pedidos

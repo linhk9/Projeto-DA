@@ -123,10 +123,10 @@
             this.tabControl.Controls.Add(this.tabPage_Restaurantes);
             this.tabControl.Controls.Add(this.tabPage_Categorias);
             this.tabControl.Controls.Add(this.tabPage_MetodoPagamento);
-            this.tabControl.Location = new System.Drawing.Point(3, 3);
+            this.tabControl.Location = new System.Drawing.Point(6, 67);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(726, 470);
+            this.tabControl.Size = new System.Drawing.Size(735, 470);
             this.tabControl.TabIndex = 21;
             // 
             // tabPage_Restaurantes
@@ -283,9 +283,9 @@
             // 
             // btn_RegistarRestaurante
             // 
-            this.btn_RegistarRestaurante.Location = new System.Drawing.Point(6, 182);
+            this.btn_RegistarRestaurante.Location = new System.Drawing.Point(6, 177);
             this.btn_RegistarRestaurante.Name = "btn_RegistarRestaurante";
-            this.btn_RegistarRestaurante.Size = new System.Drawing.Size(333, 23);
+            this.btn_RegistarRestaurante.Size = new System.Drawing.Size(333, 29);
             this.btn_RegistarRestaurante.TabIndex = 0;
             this.btn_RegistarRestaurante.Text = "Registar";
             this.btn_RegistarRestaurante.UseVisualStyleBackColor = true;
@@ -315,7 +315,7 @@
             // 
             this.btn_AlterarRestaurante.Location = new System.Drawing.Point(10, 175);
             this.btn_AlterarRestaurante.Name = "btn_AlterarRestaurante";
-            this.btn_AlterarRestaurante.Size = new System.Drawing.Size(332, 26);
+            this.btn_AlterarRestaurante.Size = new System.Drawing.Size(332, 31);
             this.btn_AlterarRestaurante.TabIndex = 21;
             this.btn_AlterarRestaurante.Text = "Alterar";
             this.btn_AlterarRestaurante.UseVisualStyleBackColor = true;
@@ -459,7 +459,7 @@
             this.tabPage_Categorias.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Categorias.Name = "tabPage_Categorias";
             this.tabPage_Categorias.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Categorias.Size = new System.Drawing.Size(718, 444);
+            this.tabPage_Categorias.Size = new System.Drawing.Size(727, 444);
             this.tabPage_Categorias.TabIndex = 1;
             this.tabPage_Categorias.Text = "Categorias";
             this.tabPage_Categorias.UseVisualStyleBackColor = true;
@@ -546,9 +546,9 @@
             // 
             // btnCategoria_Add
             // 
-            this.btnCategoria_Add.Location = new System.Drawing.Point(6, 182);
+            this.btnCategoria_Add.Location = new System.Drawing.Point(6, 175);
             this.btnCategoria_Add.Name = "btnCategoria_Add";
-            this.btnCategoria_Add.Size = new System.Drawing.Size(333, 23);
+            this.btnCategoria_Add.Size = new System.Drawing.Size(333, 30);
             this.btnCategoria_Add.TabIndex = 0;
             this.btnCategoria_Add.Text = "Registar";
             this.btnCategoria_Add.UseVisualStyleBackColor = true;
@@ -579,9 +579,9 @@
             // 
             // btnCategoria_Alterar
             // 
-            this.btnCategoria_Alterar.Location = new System.Drawing.Point(10, 168);
+            this.btnCategoria_Alterar.Location = new System.Drawing.Point(10, 163);
             this.btnCategoria_Alterar.Name = "btnCategoria_Alterar";
-            this.btnCategoria_Alterar.Size = new System.Drawing.Size(339, 26);
+            this.btnCategoria_Alterar.Size = new System.Drawing.Size(339, 31);
             this.btnCategoria_Alterar.TabIndex = 21;
             this.btnCategoria_Alterar.Text = "Alterar";
             this.btnCategoria_Alterar.UseVisualStyleBackColor = true;
@@ -621,7 +621,7 @@
             this.groupBoxLista_Categoria.Controls.Add(this.listBox_Categorias);
             this.groupBoxLista_Categoria.Location = new System.Drawing.Point(369, 7);
             this.groupBoxLista_Categoria.Name = "groupBoxLista_Categoria";
-            this.groupBoxLista_Categoria.Size = new System.Drawing.Size(341, 212);
+            this.groupBoxLista_Categoria.Size = new System.Drawing.Size(352, 212);
             this.groupBoxLista_Categoria.TabIndex = 24;
             this.groupBoxLista_Categoria.TabStop = false;
             this.groupBoxLista_Categoria.Text = "Lista de Categorias";
@@ -630,7 +630,7 @@
             // 
             this.btnCategoria_Apagar.Location = new System.Drawing.Point(277, 19);
             this.btnCategoria_Apagar.Name = "btnCategoria_Apagar";
-            this.btnCategoria_Apagar.Size = new System.Drawing.Size(58, 186);
+            this.btnCategoria_Apagar.Size = new System.Drawing.Size(69, 186);
             this.btnCategoria_Apagar.TabIndex = 1;
             this.btnCategoria_Apagar.Text = "Apagar";
             this.btnCategoria_Apagar.UseVisualStyleBackColor = true;
@@ -653,7 +653,7 @@
             this.tabPage_MetodoPagamento.Location = new System.Drawing.Point(4, 22);
             this.tabPage_MetodoPagamento.Name = "tabPage_MetodoPagamento";
             this.tabPage_MetodoPagamento.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_MetodoPagamento.Size = new System.Drawing.Size(718, 444);
+            this.tabPage_MetodoPagamento.Size = new System.Drawing.Size(727, 444);
             this.tabPage_MetodoPagamento.TabIndex = 2;
             this.tabPage_MetodoPagamento.Text = "Métodos de Pagamento";
             this.tabPage_MetodoPagamento.UseVisualStyleBackColor = true;
@@ -740,9 +740,9 @@
             // 
             // btnMetodoPagamento_Add
             // 
-            this.btnMetodoPagamento_Add.Location = new System.Drawing.Point(6, 182);
+            this.btnMetodoPagamento_Add.Location = new System.Drawing.Point(6, 177);
             this.btnMetodoPagamento_Add.Name = "btnMetodoPagamento_Add";
-            this.btnMetodoPagamento_Add.Size = new System.Drawing.Size(333, 23);
+            this.btnMetodoPagamento_Add.Size = new System.Drawing.Size(333, 28);
             this.btnMetodoPagamento_Add.TabIndex = 0;
             this.btnMetodoPagamento_Add.Text = "Registar";
             this.btnMetodoPagamento_Add.UseVisualStyleBackColor = true;
@@ -773,9 +773,9 @@
             // 
             // btnMP_Aterar
             // 
-            this.btnMP_Aterar.Location = new System.Drawing.Point(6, 168);
+            this.btnMP_Aterar.Location = new System.Drawing.Point(6, 163);
             this.btnMP_Aterar.Name = "btnMP_Aterar";
-            this.btnMP_Aterar.Size = new System.Drawing.Size(343, 26);
+            this.btnMP_Aterar.Size = new System.Drawing.Size(343, 31);
             this.btnMP_Aterar.TabIndex = 21;
             this.btnMP_Aterar.Text = "Alterar";
             this.btnMP_Aterar.UseVisualStyleBackColor = true;
@@ -815,7 +815,7 @@
             this.groupBoxMP_Lista.Controls.Add(this.listBox_MetodosPagamentos);
             this.groupBoxMP_Lista.Location = new System.Drawing.Point(369, 13);
             this.groupBoxMP_Lista.Name = "groupBoxMP_Lista";
-            this.groupBoxMP_Lista.Size = new System.Drawing.Size(341, 212);
+            this.groupBoxMP_Lista.Size = new System.Drawing.Size(352, 212);
             this.groupBoxMP_Lista.TabIndex = 27;
             this.groupBoxMP_Lista.TabStop = false;
             this.groupBoxMP_Lista.Text = "Lista de Metodos de Pagamento";
@@ -824,7 +824,7 @@
             // 
             this.btnMP_Apagar.Location = new System.Drawing.Point(277, 19);
             this.btnMP_Apagar.Name = "btnMP_Apagar";
-            this.btnMP_Apagar.Size = new System.Drawing.Size(58, 186);
+            this.btnMP_Apagar.Size = new System.Drawing.Size(69, 186);
             this.btnMP_Apagar.TabIndex = 1;
             this.btnMP_Apagar.Text = "Apagar";
             this.btnMP_Apagar.UseVisualStyleBackColor = true;
@@ -843,7 +843,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 474);
+            this.ClientSize = new System.Drawing.Size(747, 544);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

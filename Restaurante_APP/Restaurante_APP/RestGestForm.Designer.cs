@@ -47,9 +47,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acessoRapidoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(3, 64);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(455, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(443, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,7 +89,7 @@
             // 
             // gestaoDeClientesButton
             // 
-            this.gestaoDeClientesButton.Location = new System.Drawing.Point(12, 27);
+            this.gestaoDeClientesButton.Location = new System.Drawing.Point(6, 93);
             this.gestaoDeClientesButton.Name = "gestaoDeClientesButton";
             this.gestaoDeClientesButton.Size = new System.Drawing.Size(213, 45);
             this.gestaoDeClientesButton.TabIndex = 1;
@@ -99,7 +99,7 @@
             // 
             // gestaoGlobalDeRestaurantesButton
             // 
-            this.gestaoGlobalDeRestaurantesButton.Location = new System.Drawing.Point(231, 27);
+            this.gestaoGlobalDeRestaurantesButton.Location = new System.Drawing.Point(225, 93);
             this.gestaoGlobalDeRestaurantesButton.Name = "gestaoGlobalDeRestaurantesButton";
             this.gestaoGlobalDeRestaurantesButton.Size = new System.Drawing.Size(212, 45);
             this.gestaoGlobalDeRestaurantesButton.TabIndex = 2;
@@ -109,7 +109,7 @@
             // 
             // pedidosButton
             // 
-            this.pedidosButton.Location = new System.Drawing.Point(12, 78);
+            this.pedidosButton.Location = new System.Drawing.Point(6, 144);
             this.pedidosButton.Name = "pedidosButton";
             this.pedidosButton.Size = new System.Drawing.Size(431, 45);
             this.pedidosButton.TabIndex = 3;
@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 135);
+            this.ClientSize = new System.Drawing.Size(449, 195);
             this.Controls.Add(this.pedidosButton);
             this.Controls.Add(this.gestaoGlobalDeRestaurantesButton);
             this.Controls.Add(this.gestaoDeClientesButton);

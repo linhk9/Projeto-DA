@@ -1,6 +1,6 @@
 ﻿namespace Restaurante_APP
 {
-    partial class GestRest
+    partial class GestaoRestauranteForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestRest));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestaoRestauranteForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageMenu = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnPedido = new System.Windows.Forms.Button();
+            this.listBoxPedidos = new System.Windows.Forms.ListBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listboxMenusIndividual = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxMenus = new System.Windows.Forms.ComboBox();
+            this.btnRemoverMenu = new System.Windows.Forms.Button();
+            this.btnAddMenu = new System.Windows.Forms.Button();
             this.tabPageTrabalhadores = new System.Windows.Forms.TabPage();
             this.groupBox_RegistarRestaurante = new System.Windows.Forms.GroupBox();
             this.txtAddTelemovel = new System.Windows.Forms.TextBox();
@@ -74,32 +83,23 @@
             this.groupBox_ListaTrabalhadores = new System.Windows.Forms.GroupBox();
             this.btn_ApagarTrabalhador = new System.Windows.Forms.Button();
             this.listBox_Trabalhadores = new System.Windows.Forms.ListBox();
-            this.listboxMenusIndividual = new System.Windows.Forms.ListBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.comboBoxMenus = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listBoxPedidos = new System.Windows.Forms.ListBox();
-            this.btnPedido = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageMenu.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPageTrabalhadores.SuspendLayout();
             this.groupBox_RegistarRestaurante.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox_AlterarRestaurante.SuspendLayout();
             this.groupBox_ListaTrabalhadores.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPageMenu);
             this.tabControl.Controls.Add(this.tabPageTrabalhadores);
-            this.tabControl.Location = new System.Drawing.Point(2, 12);
+            this.tabControl.Location = new System.Drawing.Point(6, 67);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(766, 689);
@@ -107,12 +107,11 @@
             // 
             // tabPageMenu
             // 
-            this.tabPageMenu.Controls.Add(this.btnPedido);
             this.tabPageMenu.Controls.Add(this.groupBox4);
             this.tabPageMenu.Controls.Add(this.groupBox3);
             this.tabPageMenu.Controls.Add(this.groupBox1);
-            this.tabPageMenu.Controls.Add(this.btnRemover);
-            this.tabPageMenu.Controls.Add(this.btnAdd);
+            this.tabPageMenu.Controls.Add(this.btnRemoverMenu);
+            this.tabPageMenu.Controls.Add(this.btnAddMenu);
             this.tabPageMenu.Location = new System.Drawing.Point(4, 22);
             this.tabPageMenu.Name = "tabPageMenu";
             this.tabPageMenu.Padding = new System.Windows.Forms.Padding(3);
@@ -120,6 +119,91 @@
             this.tabPageMenu.TabIndex = 0;
             this.tabPageMenu.Text = "Menu";
             this.tabPageMenu.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnPedido);
+            this.groupBox4.Controls.Add(this.listBoxPedidos);
+            this.groupBox4.Location = new System.Drawing.Point(6, 316);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(480, 316);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Pedidos do restaurante";
+            // 
+            // btnPedido
+            // 
+            this.btnPedido.Location = new System.Drawing.Point(335, 19);
+            this.btnPedido.Name = "btnPedido";
+            this.btnPedido.Size = new System.Drawing.Size(91, 290);
+            this.btnPedido.TabIndex = 8;
+            this.btnPedido.Text = "Ver pedido";
+            this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Click += new System.EventHandler(this.BtnPedido_Click);
+            // 
+            // listBoxPedidos
+            // 
+            this.listBoxPedidos.FormattingEnabled = true;
+            this.listBoxPedidos.Location = new System.Drawing.Point(6, 19);
+            this.listBoxPedidos.Name = "listBoxPedidos";
+            this.listBoxPedidos.Size = new System.Drawing.Size(323, 290);
+            this.listBoxPedidos.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.listboxMenusIndividual);
+            this.groupBox3.Location = new System.Drawing.Point(212, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(274, 304);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Menu do Restaurante";
+            // 
+            // listboxMenusIndividual
+            // 
+            this.listboxMenusIndividual.FormattingEnabled = true;
+            this.listboxMenusIndividual.Location = new System.Drawing.Point(20, 19);
+            this.listboxMenusIndividual.Name = "listboxMenusIndividual";
+            this.listboxMenusIndividual.Size = new System.Drawing.Size(235, 264);
+            this.listboxMenusIndividual.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.comboBoxMenus);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Menu Geral";
+            // 
+            // comboBoxMenus
+            // 
+            this.comboBoxMenus.FormattingEnabled = true;
+            this.comboBoxMenus.Location = new System.Drawing.Point(27, 38);
+            this.comboBoxMenus.Name = "comboBoxMenus";
+            this.comboBoxMenus.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxMenus.TabIndex = 4;
+            // 
+            // btnRemoverMenu
+            // 
+            this.btnRemoverMenu.Location = new System.Drawing.Point(99, 112);
+            this.btnRemoverMenu.Name = "btnRemoverMenu";
+            this.btnRemoverMenu.Size = new System.Drawing.Size(107, 41);
+            this.btnRemoverMenu.TabIndex = 3;
+            this.btnRemoverMenu.Text = "Remover";
+            this.btnRemoverMenu.UseVisualStyleBackColor = true;
+            this.btnRemoverMenu.Click += new System.EventHandler(this.BtnRemoverMenu_Click);
+            // 
+            // btnAddMenu
+            // 
+            this.btnAddMenu.Location = new System.Drawing.Point(6, 112);
+            this.btnAddMenu.Name = "btnAddMenu";
+            this.btnAddMenu.Size = new System.Drawing.Size(93, 41);
+            this.btnAddMenu.TabIndex = 2;
+            this.btnAddMenu.Text = "Adicionar";
+            this.btnAddMenu.UseVisualStyleBackColor = true;
+            this.btnAddMenu.Click += new System.EventHandler(this.BtnAddMenu_Click);
             // 
             // tabPageTrabalhadores
             // 
@@ -335,9 +419,9 @@
             // 
             // btn_RegistarTrabalhador
             // 
-            this.btn_RegistarTrabalhador.Location = new System.Drawing.Point(9, 290);
+            this.btn_RegistarTrabalhador.Location = new System.Drawing.Point(10, 286);
             this.btn_RegistarTrabalhador.Name = "btn_RegistarTrabalhador";
-            this.btn_RegistarTrabalhador.Size = new System.Drawing.Size(333, 23);
+            this.btn_RegistarTrabalhador.Size = new System.Drawing.Size(333, 37);
             this.btn_RegistarTrabalhador.TabIndex = 0;
             this.btn_RegistarTrabalhador.Text = "Registar";
             this.btn_RegistarTrabalhador.UseVisualStyleBackColor = true;
@@ -425,9 +509,9 @@
             // 
             // btn_AlterarTrabalhador
             // 
-            this.btn_AlterarTrabalhador.Location = new System.Drawing.Point(7, 277);
+            this.btn_AlterarTrabalhador.Location = new System.Drawing.Point(7, 271);
             this.btn_AlterarTrabalhador.Name = "btn_AlterarTrabalhador";
-            this.btn_AlterarTrabalhador.Size = new System.Drawing.Size(332, 26);
+            this.btn_AlterarTrabalhador.Size = new System.Drawing.Size(332, 32);
             this.btn_AlterarTrabalhador.TabIndex = 21;
             this.btn_AlterarTrabalhador.Text = "Alterar";
             this.btn_AlterarTrabalhador.UseVisualStyleBackColor = true;
@@ -536,9 +620,9 @@
             // 
             // btn_ApagarTrabalhador
             // 
-            this.btn_ApagarTrabalhador.Location = new System.Drawing.Point(98, 227);
+            this.btn_ApagarTrabalhador.Location = new System.Drawing.Point(7, 210);
             this.btn_ApagarTrabalhador.Name = "btn_ApagarTrabalhador";
-            this.btn_ApagarTrabalhador.Size = new System.Drawing.Size(157, 38);
+            this.btn_ApagarTrabalhador.Size = new System.Drawing.Size(317, 38);
             this.btn_ApagarTrabalhador.TabIndex = 1;
             this.btn_ApagarTrabalhador.Text = "Apagar";
             this.btn_ApagarTrabalhador.UseVisualStyleBackColor = true;
@@ -553,103 +637,23 @@
             this.listBox_Trabalhadores.TabIndex = 0;
             this.listBox_Trabalhadores.SelectedIndexChanged += new System.EventHandler(this.ListBox_Trabalhadores_SelectedIndexChanged);
             // 
-            // listboxMenusIndividual
-            // 
-            this.listboxMenusIndividual.FormattingEnabled = true;
-            this.listboxMenusIndividual.Location = new System.Drawing.Point(20, 19);
-            this.listboxMenusIndividual.Name = "listboxMenusIndividual";
-            this.listboxMenusIndividual.Size = new System.Drawing.Size(235, 264);
-            this.listboxMenusIndividual.TabIndex = 0;
-            this.listboxMenusIndividual.SelectedIndexChanged += new System.EventHandler(this.listboxMenusIndividual_SelectedIndexChanged);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(21, 127);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(105, 52);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Adicionar";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.Location = new System.Drawing.Point(21, 218);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(105, 54);
-            this.btnRemover.TabIndex = 3;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxMenus
-            // 
-            this.comboBoxMenus.FormattingEnabled = true;
-            this.comboBoxMenus.Location = new System.Drawing.Point(27, 38);
-            this.comboBoxMenus.Name = "comboBoxMenus";
-            this.comboBoxMenus.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxMenus.TabIndex = 4;
-            this.comboBoxMenus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBoxMenus);
-            this.groupBox1.Location = new System.Drawing.Point(6, 21);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Menu Geral";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.listboxMenusIndividual);
-            this.groupBox3.Location = new System.Drawing.Point(222, 28);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(274, 304);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Menu do Restaurante";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.listBoxPedidos);
-            this.groupBox4.Location = new System.Drawing.Point(33, 356);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(274, 304);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Pedidos do restaurante";
-            // 
-            // listBoxPedidos
-            // 
-            this.listBoxPedidos.FormattingEnabled = true;
-            this.listBoxPedidos.Location = new System.Drawing.Point(20, 19);
-            this.listBoxPedidos.Name = "listBoxPedidos";
-            this.listBoxPedidos.Size = new System.Drawing.Size(235, 264);
-            this.listBoxPedidos.TabIndex = 0;
-            // 
-            // btnPedido
-            // 
-            this.btnPedido.Location = new System.Drawing.Point(355, 424);
-            this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(91, 63);
-            this.btnPedido.TabIndex = 8;
-            this.btnPedido.Text = "Ver pedido";
-            this.btnPedido.UseVisualStyleBackColor = true;
-            // 
-            // GestRest
+            // GestaoRestauranteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 703);
+            this.ClientSize = new System.Drawing.Size(778, 762);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "GestRest";
+            this.Name = "GestaoRestauranteForm";
             this.Text = "Gestão De Restaurante";
-            this.Load += new System.EventHandler(this.GestRest_Load);
+            this.Load += new System.EventHandler(this.GestaoRestaurante_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPageMenu.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.tabPageTrabalhadores.ResumeLayout(false);
             this.groupBox_RegistarRestaurante.ResumeLayout(false);
             this.groupBox_RegistarRestaurante.PerformLayout();
@@ -657,9 +661,6 @@
             this.groupBox_AlterarRestaurante.ResumeLayout(false);
             this.groupBox_AlterarRestaurante.PerformLayout();
             this.groupBox_ListaTrabalhadores.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -712,8 +713,8 @@
         private System.Windows.Forms.TextBox txtAlterarTelemovel;
         private System.Windows.Forms.Label labelAlterar_Telemovel;
         private System.Windows.Forms.ComboBox comboBoxMenus;
-        private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemoverMenu;
+        private System.Windows.Forms.Button btnAddMenu;
         private System.Windows.Forms.ListBox listboxMenusIndividual;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
