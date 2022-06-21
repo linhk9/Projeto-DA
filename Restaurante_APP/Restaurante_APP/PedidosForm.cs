@@ -12,15 +12,17 @@ namespace Restaurante_APP
 {
     public partial class Pedidos : Form
     {
-        public Pedidos()
+        public static RestauranteAPPContainer restauranteAPP;
+        public static Pedidos pedidos;
+        public Pedidos(Pedidos Pedidosselected)
         {
             InitializeComponent();
+            Pedidosselected = pedidos;
         }
 
-        private void button_cancelar_Click(object sender, EventArgs e)
+        private void Pedidos_Load(object sender, EventArgs e)
         {
-            Pedidos PedidosForm = new Pedidos();
-            PedidosForm.Close();
+
         }
     }
 }

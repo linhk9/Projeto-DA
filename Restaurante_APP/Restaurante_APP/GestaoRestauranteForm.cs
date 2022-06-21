@@ -29,9 +29,26 @@ namespace Restaurante_APP
 
         private void LerDadosTrabalhadores()
         {
-            listBox_Trabalhadores.DataSource = restauranteAPP.Pessoa_Trabalhador.OfType<Pessoa_Trabalhador>().ToList();
+            listBox_Trabalhadores.DataSource = restaurante.Pessoa_Trabalhador.OfType<Pessoa_Trabalhador>().ToList();
             listBox_Trabalhadores.Refresh();
         }
+        private void LerDadosPedidos()
+        {
+            listBoxPedidos.DataSource = restaurante.PedidoSet.OfType<PedidoSet>().ToList();
+            listBoxPedidos.Refresh();
+        }
+
+        private void LerDadosMenus()
+        {
+            listboxMenusIndividual.DataSource = restaurante.ItemMenuSet.OfType<ItemMenuSet>().ToList();
+            listboxMenusIndividual.Refresh();
+        }
+        private void LerDadosMenustodos()
+        {
+            comboBoxMenus.DataSource = restauranteAPP.ItemMenuSet.OfType<ItemMenuSet>().ToList();
+            comboBoxMenus.Refresh();
+        }
+
         private bool VerificarTexto(string texto)
         {
             return String.IsNullOrEmpty(texto);
@@ -125,6 +142,16 @@ namespace Restaurante_APP
             restauranteAPP.Pessoa_Trabalhador.Remove(trabalhador);
             restauranteAPP.SaveChanges();
             LerDadosTrabalhadores();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listboxMenusIndividual_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
