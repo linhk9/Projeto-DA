@@ -37,7 +37,6 @@
             this.gestaoDeClientesButton = new System.Windows.Forms.Button();
             this.gestaoGlobalDeRestaurantesButton = new System.Windows.Forms.Button();
             this.pedidosButton = new System.Windows.Forms.Button();
-            this.RestaurantesListBox = new System.Windows.Forms.ListBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.menuStrip1.SuspendLayout();
@@ -118,14 +117,6 @@
             this.pedidosButton.UseVisualStyleBackColor = true;
             this.pedidosButton.Click += new System.EventHandler(this.pedidosButton_Click);
             // 
-            // RestaurantesListBox
-            // 
-            this.RestaurantesListBox.FormattingEnabled = true;
-            this.RestaurantesListBox.Location = new System.Drawing.Point(12, 129);
-            this.RestaurantesListBox.Name = "RestaurantesListBox";
-            this.RestaurantesListBox.Size = new System.Drawing.Size(431, 316);
-            this.RestaurantesListBox.TabIndex = 4;
-            // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
@@ -143,8 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 463);
-            this.Controls.Add(this.RestaurantesListBox);
+            this.ClientSize = new System.Drawing.Size(455, 132);
             this.Controls.Add(this.pedidosButton);
             this.Controls.Add(this.gestaoGlobalDeRestaurantesButton);
             this.Controls.Add(this.gestaoDeClientesButton);
@@ -173,7 +163,6 @@
         private System.Windows.Forms.Button gestaoDeClientesButton;
         private System.Windows.Forms.Button gestaoGlobalDeRestaurantesButton;
         private System.Windows.Forms.Button pedidosButton;
-        private System.Windows.Forms.ListBox RestaurantesListBox;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }

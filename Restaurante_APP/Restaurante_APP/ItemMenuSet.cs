@@ -12,19 +12,27 @@ namespace Restaurante_APP
     using System;
     using System.Collections.Generic;
     
-    public partial class Categoria
+    public partial class ItemMenuSet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Categoria()
+        public ItemMenuSet()
         {
-            this.ItemMenu = new HashSet<ItemMenu>();
+            this.Restaurante = new HashSet<Restaurante>();
+            this.PedidoSet = new HashSet<PedidoSet>();
         }
     
-        public int IdCategoria { get; set; }
+        public int IdItemMenu { get; set; }
+        public int CategoriaIdCategoria { get; set; }
         public string Nome { get; set; }
+        public string Fotografia { get; set; }
+        public string Ingredientes { get; set; }
+        public double Precos { get; set; }
         public bool Ativo { get; set; }
     
+        public virtual CategoriaSet CategoriaSet { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ItemMenu> ItemMenu { get; set; }
+        public virtual ICollection<Restaurante> Restaurante { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PedidoSet> PedidoSet { get; set; }
     }
 }

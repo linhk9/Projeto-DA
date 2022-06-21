@@ -32,3 +32,22 @@ C:\Users\rodri\Desktop\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP
 C:\Users\rodri\Desktop\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.ClientGestForm.resources
 C:\Users\rodri\Desktop\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestRest.resources
 C:\Users\rodri\Desktop\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.Pedidos.resources
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\Restaurante_APP.exe.config
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\Restaurante_APP.exe
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\Restaurante_APP.pdb
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.dll
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.xml
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.AssemblyReference.cache
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestaoClientesForm.resources
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestRest.resources
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestaoRestaurantesForm.resources
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.Pedidos.resources
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.Properties.Resources.resources
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.RestGestForm.resources
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.GenerateResource.cache
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.CoreCompileInputs.cache
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.CopyComplete
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.exe
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.pdb

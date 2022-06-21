@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Restaurante_APP</RootNamespace>
     <AssemblyName>Restaurante_APP</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,6 +58,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -70,59 +72,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categoria.cs">
+    <Compile Include="CategoriaSet.cs">
       <DependentUpon>RestauranteAPP.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs">
+    <Compile Include="EstadoPedidoSet.cs">
       <DependentUpon>RestauranteAPP.tt</DependentUpon>
     </Compile>
-    <Compile Include="ClientGestForm.cs">
+    <Compile Include="GestaoClientesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientGestForm.Designer.cs">
-      <DependentUpon>ClientGestForm.cs</DependentUpon>
+    <Compile Include="GestaoClientesForm.Designer.cs">
+      <DependentUpon>GestaoClientesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EstadoPedido.cs">
-      <DependentUpon>RestauranteAPP.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GestRest.cs">
+    <Compile Include="GestaoRestauranteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestRest.Designer.cs">
-      <DependentUpon>GestRest.cs</DependentUpon>
+    <Compile Include="GestaoRestauranteForm.Designer.cs">
+      <DependentUpon>GestaoRestauranteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.cs">
+    <Compile Include="GestaoRestaurantesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedidos.Designer.cs">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <Compile Include="GestaoRestaurantesForm.Designer.cs">
+      <DependentUpon>GestaoRestaurantesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RestGestForm.cs">
+    <Compile Include="ItemMenuSet.cs">
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetodoPagamentoSet.cs">
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MoradaSet.cs">
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PagamentoSet.cs">
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PedidoSet.cs">
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RestGestForm.Designer.cs">
-      <DependentUpon>RestGestForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ItemMenu.cs">
-      <DependentUpon>RestauranteAPP.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MetodoPagamento.cs">
-      <DependentUpon>RestauranteAPP.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Morada.cs">
-      <DependentUpon>RestauranteAPP.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pagamento.cs">
-      <DependentUpon>RestauranteAPP.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pedido.cs">
-      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    <Compile Include="PedidosForm.Designer.cs">
+      <DependentUpon>PedidosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Pessoa.cs">
       <DependentUpon>RestauranteAPP.tt</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pessoa_Cliente.cs">
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pessoa_Trabalhador.cs">
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Restaurante.cs">
       <DependentUpon>RestauranteAPP.tt</DependentUpon>
     </Compile>
@@ -131,22 +134,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RestauranteAPP.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="RestauranteAPP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    </Compile>
     <Compile Include="RestauranteAPP.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RestauranteAPP.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Trabalhador.cs">
-      <DependentUpon>RestauranteAPP.tt</DependentUpon>
+    <Compile Include="RestGestForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="ClientGestForm.resx">
-      <DependentUpon>ClientGestForm.cs</DependentUpon>
+    <Compile Include="RestGestForm.Designer.cs">
+      <DependentUpon>RestGestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GestaoClientesForm.resx">
+      <DependentUpon>GestaoClientesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestRest.resx">
-      <DependentUpon>GestRest.cs</DependentUpon>
+    <EmbeddedResource Include="GestaoRestauranteForm.resx">
+      <DependentUpon>GestaoRestauranteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pedidos.resx">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="GestaoRestaurantesForm.resx">
+      <DependentUpon>GestaoRestaurantesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidosForm.resx">
+      <DependentUpon>PedidosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RestGestForm.resx">
       <DependentUpon>RestGestForm.cs</DependentUpon>
@@ -184,17 +201,18 @@
   <ItemGroup>
     <Content Include="RestauranteAPP.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RestauranteAPP.Context.cs</LastGenOutput>
       <DependentUpon>RestauranteAPP.edmx</DependentUpon>
+      <LastGenOutput>RestauranteAPP.Context.cs</LastGenOutput>
     </Content>
     <Content Include="RestauranteAPP.edmx.sql" />
     <Content Include="RestauranteAPP.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RestauranteAPP.cs</LastGenOutput>
       <DependentUpon>RestauranteAPP.edmx</DependentUpon>
+      <LastGenOutput>RestauranteAPP.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>

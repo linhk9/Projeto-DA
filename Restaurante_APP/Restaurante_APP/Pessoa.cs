@@ -17,7 +17,15 @@ namespace Restaurante_APP
         public int IdPessoa { get; set; }
         public string Nome { get; set; }
         public int Telemovel { get; set; }
+        public int Morada_IdMorada { get; set; }
     
-        public virtual Morada Morada { get; set; }
+        public virtual MoradaSet MoradaSet { get; set; }
+        public virtual Pessoa_Cliente Pessoa_Cliente { get; set; }
+        public virtual Pessoa_Trabalhador Pessoa_Trabalhador { get; set; }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
     }
 }

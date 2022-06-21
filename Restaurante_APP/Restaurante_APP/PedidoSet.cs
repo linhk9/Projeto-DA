@@ -12,26 +12,29 @@ namespace Restaurante_APP
     using System;
     using System.Collections.Generic;
     
-    public partial class Pedido
+    public partial class PedidoSet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pedido()
+        public PedidoSet()
         {
-            this.ItemMenu = new HashSet<ItemMenu>();
-            this.Pagamento = new HashSet<Pagamento>();
+            this.PagamentoSet = new HashSet<PagamentoSet>();
+            this.ItemMenuSet = new HashSet<ItemMenuSet>();
         }
     
         public int IdPedido { get; set; }
         public int EstadoPedidoIdEstado { get; set; }
         public double ValorTotal { get; set; }
+        public int Trabalhador_IdPessoa { get; set; }
+        public int Cliente_IdPessoa { get; set; }
+        public int Restaurante_IdRestaurante { get; set; }
     
-        public virtual Trabalhador Trabalhador { get; set; }
-        public virtual Cliente Cliente { get; set; }
+        public virtual EstadoPedidoSet EstadoPedidoSet { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PagamentoSet> PagamentoSet { get; set; }
+        public virtual Pessoa_Cliente Pessoa_Cliente { get; set; }
         public virtual Restaurante Restaurante { get; set; }
+        public virtual Pessoa_Trabalhador Pessoa_Trabalhador { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ItemMenu> ItemMenu { get; set; }
-        public virtual EstadoPedido EstadoPedido { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pagamento> Pagamento { get; set; }
+        public virtual ICollection<ItemMenuSet> ItemMenuSet { get; set; }
     }
 }

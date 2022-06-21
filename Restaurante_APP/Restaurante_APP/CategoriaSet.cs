@@ -12,31 +12,30 @@ namespace Restaurante_APP
     using System;
     using System.Collections.Generic;
     
-    public partial class Restaurante
+    public partial class CategoriaSet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Restaurante()
+        public CategoriaSet()
         {
-            this.PedidoSet = new HashSet<PedidoSet>();
-            this.Pessoa_Trabalhador = new HashSet<Pessoa_Trabalhador>();
             this.ItemMenuSet = new HashSet<ItemMenuSet>();
         }
     
-        public int IdRestaurante { get; set; }
+        public int IdCategoria { get; set; }
         public string Nome { get; set; }
-        public int Morada_IdMorada { get; set; }
+        public bool Ativo { get; set; }
     
-        public virtual MoradaSet MoradaSet { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PedidoSet> PedidoSet { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pessoa_Trabalhador> Pessoa_Trabalhador { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ItemMenuSet> ItemMenuSet { get; set; }
 
         public override string ToString()
         {
-            return "#" + this.IdRestaurante + " - " + this.Nome;
+            if(this.Ativo)
+            {
+                return "#" + this.IdCategoria + " - " + this.Nome + " (Ativo)";
+            } else
+            {
+                return "#" + this.IdCategoria + " - " + this.Nome + " (Desativado)";
+            }
         }
     }
 }

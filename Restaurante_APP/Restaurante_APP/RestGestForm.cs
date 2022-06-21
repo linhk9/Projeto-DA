@@ -19,19 +19,19 @@ namespace Restaurante_APP
 
         private void gestaoDeClientesButton_Click(object sender, EventArgs e)
         {
-            ClientGestForm ClientForm = new ClientGestForm();
+            GestaoClientesForm ClientForm = new GestaoClientesForm();
             ClientForm.ShowDialog();
         }
 
         private void gesstãoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ClientGestForm ClientForm = new ClientGestForm();
+            GestaoClientesForm ClientForm = new GestaoClientesForm();
             ClientForm.ShowDialog();
         }
 
         private void gestaoGlobalDeRestaurantesButton_Click(object sender, EventArgs e)
         {
-            GestRest RestForm = new GestRest();
+            GestaoRestaurantesForm RestForm = new GestaoRestaurantesForm();
             RestForm.ShowDialog();
         }
 
@@ -43,7 +43,7 @@ namespace Restaurante_APP
 
         private void gestaoGlobalDeRestaurantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestRest RestForm = new GestRest();
+            GestaoRestaurantesForm RestForm = new GestaoRestaurantesForm();
             RestForm.ShowDialog();
         }
 

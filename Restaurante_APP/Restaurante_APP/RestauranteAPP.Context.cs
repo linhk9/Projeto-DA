@@ -25,14 +25,16 @@ namespace Restaurante_APP
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CategoriaSet> CategoriaSet { get; set; }
+        public virtual DbSet<EstadoPedidoSet> EstadoPedidoSet { get; set; }
+        public virtual DbSet<ItemMenuSet> ItemMenuSet { get; set; }
+        public virtual DbSet<MetodoPagamentoSet> MetodoPagamentoSet { get; set; }
+        public virtual DbSet<MoradaSet> MoradaSet { get; set; }
+        public virtual DbSet<PagamentoSet> PagamentoSet { get; set; }
+        public virtual DbSet<PedidoSet> PedidoSet { get; set; }
         public virtual DbSet<Pessoa> Pessoa { get; set; }
+        public virtual DbSet<Pessoa_Cliente> Pessoa_Cliente { get; set; }
+        public virtual DbSet<Pessoa_Trabalhador> Pessoa_Trabalhador { get; set; }
         public virtual DbSet<Restaurante> Restaurante { get; set; }
-        public virtual DbSet<Morada> MoradaSet { get; set; }
-        public virtual DbSet<ItemMenu> ItemMenuSet { get; set; }
-        public virtual DbSet<Pedido> PedidoSet { get; set; }
-        public virtual DbSet<EstadoPedido> EstadoPedidoSet { get; set; }
-        public virtual DbSet<Pagamento> PagamentoSet { get; set; }
-        public virtual DbSet<MetodoPagamento> MetodoPagamentoSet { get; set; }
-        public virtual DbSet<Categoria> CategoriaSet { get; set; }
     }
 }

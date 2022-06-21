@@ -12,19 +12,27 @@ namespace Restaurante_APP
     using System;
     using System.Collections.Generic;
     
-    public partial class MetodoPagamento
+    public partial class Pessoa_Trabalhador
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MetodoPagamento()
+        public Pessoa_Trabalhador()
         {
-            this.Pagamento = new HashSet<Pagamento>();
+            this.PedidoSet = new HashSet<PedidoSet>();
         }
     
-        public int IdMetodo { get; set; }
-        public string MetododePagamento { get; set; }
-        public bool Ativo { get; set; }
+        public double Salario { get; set; }
+        public string Posicao { get; set; }
+        public int IdPessoa { get; set; }
+        public int Restaurante_IdRestaurante { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pagamento> Pagamento { get; set; }
+        public virtual ICollection<PedidoSet> PedidoSet { get; set; }
+        public virtual Pessoa Pessoa { get; set; }
+        public virtual Restaurante Restaurante { get; set; }
+
+        public override string ToString()
+        {
+            return "#" + this.IdPessoa + " - " + this.Pessoa.Nome + " (" + this.Posicao + ")";
+        }
     }
 }

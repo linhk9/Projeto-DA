@@ -12,12 +12,14 @@ namespace Restaurante_APP
     using System;
     using System.Collections.Generic;
     
-    public partial class Pagamento
+    public partial class PagamentoSet
     {
         public int IdPagamento { get; set; }
         public double Valor { get; set; }
+        public int Pedido_IdPedido { get; set; }
+        public int MetodoPagamento_IdMetodo { get; set; }
     
-        public virtual Pedido Pedido { get; set; }
-        public virtual MetodoPagamento MetodoPagamento { get; set; }
+        public virtual MetodoPagamentoSet MetodoPagamentoSet { get; set; }
+        public virtual PedidoSet PedidoSet { get; set; }
     }
 }

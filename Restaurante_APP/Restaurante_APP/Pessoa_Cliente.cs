@@ -12,18 +12,25 @@ namespace Restaurante_APP
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente : Pessoa
+    public partial class Pessoa_Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Pessoa_Cliente()
         {
-            this.Pedido = new HashSet<Pedido>();
+            this.PedidoSet = new HashSet<PedidoSet>();
         }
     
         public double TotalGasto { get; set; }
         public int NumContribuinte { get; set; }
+        public int IdPessoa { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pedido> Pedido { get; set; }
-    }
+        public virtual ICollection<PedidoSet> PedidoSet { get; set; }
+        public virtual Pessoa Pessoa { get; set; }
+
+        public override string ToString()
+        {
+            return "#" + this.IdPessoa + " - " + this.Pessoa.Nome + " (" + this.NumContribuinte + ")";
+        }
+}
 }
