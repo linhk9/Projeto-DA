@@ -35,7 +35,7 @@
             // button_cancelar
             // 
             this.button_cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_cancelar.Location = new System.Drawing.Point(169, 280);
+            this.button_cancelar.Location = new System.Drawing.Point(141, 390);
             this.button_cancelar.Name = "button_cancelar";
             this.button_cancelar.Size = new System.Drawing.Size(140, 33);
             this.button_cancelar.TabIndex = 1;
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 363);
+            this.ClientSize = new System.Drawing.Size(783, 514);
             this.Controls.Add(this.button_cancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

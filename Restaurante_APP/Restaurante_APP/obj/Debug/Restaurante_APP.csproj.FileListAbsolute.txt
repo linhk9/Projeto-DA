@@ -51,3 +51,23 @@ C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_AP
 C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.CopyComplete
 C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.exe
 C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.pdb
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\Restaurante_APP.exe.config
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\Restaurante_APP.exe
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\Restaurante_APP.pdb
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.dll
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.SqlServer.dll
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.xml
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\EntityFramework.SqlServer.xml
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.AssemblyReference.cache
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.SuggestedBindingRedirects.cache
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestaoClientesForm.resources
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestRest.resources
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestaoRestaurantesForm.resources
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.Pedidos.resources
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.Properties.Resources.resources
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.RestGestForm.resources
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.GenerateResource.cache
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.CoreCompileInputs.cache
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.csproj.CopyComplete
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.exe
+C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.pdb

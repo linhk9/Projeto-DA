@@ -236,5 +236,13 @@ namespace Restaurante_APP
                 MessageBox.Show("Preenche todos os campos para adicionares um cliente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnAbrirRestaurante_Click(object sender, EventArgs e)
+        {
+            Restaurante restauranteselected = (Restaurante)listBox_Restaurantes.SelectedItem;
+            GestRest GestaoRestauranteForm = new GestRest(restauranteselected);
+            GestaoRestauranteForm.ShowDialog();
+        }
+
     }
 }

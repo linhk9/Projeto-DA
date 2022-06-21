@@ -59,6 +59,7 @@
             this.textBoxAlterar_Nome = new System.Windows.Forms.TextBox();
             this.labelAlterar_Nome = new System.Windows.Forms.Label();
             this.groupBox_ListaRestaurantes = new System.Windows.Forms.GroupBox();
+            this.btnAbrirRestaurante = new System.Windows.Forms.Button();
             this.btn_ApagarRestaurante = new System.Windows.Forms.Button();
             this.listBox_Restaurantes = new System.Windows.Forms.ListBox();
             this.tabPage_Categorias = new System.Windows.Forms.TabPage();
@@ -410,30 +411,42 @@
             // 
             // groupBox_ListaRestaurantes
             // 
+            this.groupBox_ListaRestaurantes.Controls.Add(this.btnAbrirRestaurante);
             this.groupBox_ListaRestaurantes.Controls.Add(this.btn_ApagarRestaurante);
             this.groupBox_ListaRestaurantes.Controls.Add(this.listBox_Restaurantes);
             this.groupBox_ListaRestaurantes.Location = new System.Drawing.Point(367, 6);
             this.groupBox_ListaRestaurantes.Name = "groupBox_ListaRestaurantes";
-            this.groupBox_ListaRestaurantes.Size = new System.Drawing.Size(341, 212);
+            this.groupBox_ListaRestaurantes.Size = new System.Drawing.Size(341, 277);
             this.groupBox_ListaRestaurantes.TabIndex = 21;
             this.groupBox_ListaRestaurantes.TabStop = false;
             this.groupBox_ListaRestaurantes.Text = "Lista de Restaurantes";
             // 
+            // btnAbrirRestaurante
+            // 
+            this.btnAbrirRestaurante.Location = new System.Drawing.Point(7, 228);
+            this.btnAbrirRestaurante.Name = "btnAbrirRestaurante";
+            this.btnAbrirRestaurante.Size = new System.Drawing.Size(154, 37);
+            this.btnAbrirRestaurante.TabIndex = 2;
+            this.btnAbrirRestaurante.Text = "Abrir restaurante";
+            this.btnAbrirRestaurante.UseVisualStyleBackColor = true;
+            this.btnAbrirRestaurante.Click += new System.EventHandler(this.btnAbrirRestaurante_Click);
+            // 
             // btn_ApagarRestaurante
             // 
-            this.btn_ApagarRestaurante.Location = new System.Drawing.Point(277, 19);
+            this.btn_ApagarRestaurante.Location = new System.Drawing.Point(167, 228);
             this.btn_ApagarRestaurante.Name = "btn_ApagarRestaurante";
-            this.btn_ApagarRestaurante.Size = new System.Drawing.Size(58, 186);
+            this.btn_ApagarRestaurante.Size = new System.Drawing.Size(157, 38);
             this.btn_ApagarRestaurante.TabIndex = 1;
             this.btn_ApagarRestaurante.Text = "Apagar";
             this.btn_ApagarRestaurante.UseVisualStyleBackColor = true;
+            this.btn_ApagarRestaurante.Click += new System.EventHandler(this.Btn_ApagarRestaurante_Click);
             // 
             // listBox_Restaurantes
             // 
             this.listBox_Restaurantes.FormattingEnabled = true;
             this.listBox_Restaurantes.Location = new System.Drawing.Point(7, 20);
             this.listBox_Restaurantes.Name = "listBox_Restaurantes";
-            this.listBox_Restaurantes.Size = new System.Drawing.Size(264, 186);
+            this.listBox_Restaurantes.Size = new System.Drawing.Size(317, 186);
             this.listBox_Restaurantes.TabIndex = 0;
             // 
             // tabPage_Categorias
@@ -934,5 +947,6 @@
         private System.Windows.Forms.GroupBox groupBoxMP_Lista;
         private System.Windows.Forms.Button btnMP_Apagar;
         private System.Windows.Forms.ListBox listBox_MetodosPagamentos;
+        private System.Windows.Forms.Button btnAbrirRestaurante;
     }
 }
