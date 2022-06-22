@@ -83,6 +83,7 @@
             this.groupBox_ListaTrabalhadores = new System.Windows.Forms.GroupBox();
             this.btn_ApagarTrabalhador = new System.Windows.Forms.Button();
             this.listBox_Trabalhadores = new System.Windows.Forms.ListBox();
+            this.btnEditarMenu = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageMenu.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             // tabPageMenu
             // 
+            this.tabPageMenu.Controls.Add(this.btnEditarMenu);
             this.tabPageMenu.Controls.Add(this.groupBox4);
             this.tabPageMenu.Controls.Add(this.groupBox3);
             this.tabPageMenu.Controls.Add(this.groupBox1);
@@ -637,11 +639,21 @@
             this.listBox_Trabalhadores.TabIndex = 0;
             this.listBox_Trabalhadores.SelectedIndexChanged += new System.EventHandler(this.ListBox_Trabalhadores_SelectedIndexChanged);
             // 
+            // btnEditarMenu
+            // 
+            this.btnEditarMenu.Location = new System.Drawing.Point(6, 159);
+            this.btnEditarMenu.Name = "btnEditarMenu";
+            this.btnEditarMenu.Size = new System.Drawing.Size(200, 37);
+            this.btnEditarMenu.TabIndex = 8;
+            this.btnEditarMenu.Text = "Editar menu";
+            this.btnEditarMenu.UseVisualStyleBackColor = true;
+            this.btnEditarMenu.Click += new System.EventHandler(this.btnEditarMenu_Click);
+            // 
             // GestaoRestauranteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 762);
+            this.ClientSize = new System.Drawing.Size(794, 801);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -721,5 +733,6 @@
         private System.Windows.Forms.Button btnPedido;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListBox listBoxPedidos;
+        private System.Windows.Forms.Button btnEditarMenu;
     }
 }

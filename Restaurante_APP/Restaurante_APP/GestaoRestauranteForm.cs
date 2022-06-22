@@ -184,5 +184,15 @@ namespace Restaurante_APP
                 pedidosForm.ShowDialog();
             }
         }
+
+        private void btnEditarMenu_Click(object sender, EventArgs e)
+        {
+            if (listboxMenusIndividual.Items.Count > 0)
+            {
+                Menu menu = (Menu)listboxMenusIndividual.SelectedItem;
+                MenuForm menus = new MenuForm(menu);
+                menus.ShowDialog();
+            }
+        }
     }
 }
