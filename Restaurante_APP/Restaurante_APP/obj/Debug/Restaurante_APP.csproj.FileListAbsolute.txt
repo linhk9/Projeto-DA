@@ -72,3 +72,4 @@ C:\wamp64\www\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_A
 C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.GestaoRestauranteForm.resources
 C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.PedidosForm.resources
 C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\bin\Debug\MaterialSkin.dll
+C:\Users\black\OneDrive - IPLeiria\Ano 1\Semestre 2\DA\Projeto-DA\Restaurante_APP\Restaurante_APP\obj\Debug\Restaurante_APP.MenuForm.resources

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox_RegistarMenu = new System.Windows.Forms.GroupBox();
+            this.btnAddUpload = new System.Windows.Forms.Button();
             this.txtAddfotografia = new System.Windows.Forms.TextBox();
             this.pictureBoxAddFoto = new System.Windows.Forms.PictureBox();
             this.comboBoxAddCategoria = new System.Windows.Forms.ComboBox();
@@ -47,6 +48,7 @@
             this.labelAdd_Nome = new System.Windows.Forms.Label();
             this.btn_AdicionarMenu = new System.Windows.Forms.Button();
             this.groupBox_AlterarMenu = new System.Windows.Forms.GroupBox();
+            this.btnAltUpload = new System.Windows.Forms.Button();
             this.txtAlterarfotografia = new System.Windows.Forms.TextBox();
             this.pictureBoxAlterarFoto = new System.Windows.Forms.PictureBox();
             this.comboBoxAlterarCategoria = new System.Windows.Forms.ComboBox();
@@ -64,8 +66,6 @@
             this.groupBox_ListaMenu = new System.Windows.Forms.GroupBox();
             this.btn_ApagarMenu = new System.Windows.Forms.Button();
             this.listBox_Menu = new System.Windows.Forms.ListBox();
-            this.btnAltUpload = new System.Windows.Forms.Button();
-            this.btnAddUpload = new System.Windows.Forms.Button();
             this.groupBox_RegistarMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddFoto)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -92,17 +92,27 @@
             this.groupBox_RegistarMenu.Controls.Add(this.textBoxAdd_Nome);
             this.groupBox_RegistarMenu.Controls.Add(this.labelAdd_Nome);
             this.groupBox_RegistarMenu.Controls.Add(this.btn_AdicionarMenu);
-            this.groupBox_RegistarMenu.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_RegistarMenu.Location = new System.Drawing.Point(6, 67);
             this.groupBox_RegistarMenu.Name = "groupBox_RegistarMenu";
-            this.groupBox_RegistarMenu.Size = new System.Drawing.Size(355, 361);
+            this.groupBox_RegistarMenu.Size = new System.Drawing.Size(355, 387);
             this.groupBox_RegistarMenu.TabIndex = 29;
             this.groupBox_RegistarMenu.TabStop = false;
             this.groupBox_RegistarMenu.Text = "Registar Menu";
             // 
+            // btnAddUpload
+            // 
+            this.btnAddUpload.Location = new System.Drawing.Point(136, 171);
+            this.btnAddUpload.Name = "btnAddUpload";
+            this.btnAddUpload.Size = new System.Drawing.Size(203, 34);
+            this.btnAddUpload.TabIndex = 32;
+            this.btnAddUpload.Text = "Upload";
+            this.btnAddUpload.UseVisualStyleBackColor = true;
+            this.btnAddUpload.Click += new System.EventHandler(this.BtnAddUpload_Click);
+            // 
             // txtAddfotografia
             // 
             this.txtAddfotografia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddfotografia.Location = new System.Drawing.Point(136, 147);
+            this.txtAddfotografia.Location = new System.Drawing.Point(136, 142);
             this.txtAddfotografia.Name = "txtAddfotografia";
             this.txtAddfotografia.Size = new System.Drawing.Size(203, 26);
             this.txtAddfotografia.TabIndex = 31;
@@ -111,14 +121,14 @@
             // 
             this.pictureBoxAddFoto.Location = new System.Drawing.Point(136, 54);
             this.pictureBoxAddFoto.Name = "pictureBoxAddFoto";
-            this.pictureBoxAddFoto.Size = new System.Drawing.Size(177, 87);
+            this.pictureBoxAddFoto.Size = new System.Drawing.Size(203, 87);
             this.pictureBoxAddFoto.TabIndex = 30;
             this.pictureBoxAddFoto.TabStop = false;
             // 
             // comboBoxAddCategoria
             // 
             this.comboBoxAddCategoria.FormattingEnabled = true;
-            this.comboBoxAddCategoria.Location = new System.Drawing.Point(136, 253);
+            this.comboBoxAddCategoria.Location = new System.Drawing.Point(140, 288);
             this.comboBoxAddCategoria.Name = "comboBoxAddCategoria";
             this.comboBoxAddCategoria.Size = new System.Drawing.Size(203, 21);
             this.comboBoxAddCategoria.TabIndex = 27;
@@ -127,7 +137,7 @@
             // 
             this.checkBoxAddAtivo.AutoSize = true;
             this.checkBoxAddAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxAddAtivo.Location = new System.Drawing.Point(136, 280);
+            this.checkBoxAddAtivo.Location = new System.Drawing.Point(140, 315);
             this.checkBoxAddAtivo.Name = "checkBoxAddAtivo";
             this.checkBoxAddAtivo.Size = new System.Drawing.Size(58, 21);
             this.checkBoxAddAtivo.TabIndex = 26;
@@ -147,7 +157,7 @@
             // txtAddPrecos
             // 
             this.txtAddPrecos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddPrecos.Location = new System.Drawing.Point(136, 214);
+            this.txtAddPrecos.Location = new System.Drawing.Point(140, 249);
             this.txtAddPrecos.Name = "txtAddPrecos";
             this.txtAddPrecos.Size = new System.Drawing.Size(203, 26);
             this.txtAddPrecos.TabIndex = 23;
@@ -155,7 +165,7 @@
             // txtAddIngredientes
             // 
             this.txtAddIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddIngredientes.Location = new System.Drawing.Point(136, 179);
+            this.txtAddIngredientes.Location = new System.Drawing.Point(140, 214);
             this.txtAddIngredientes.Name = "txtAddIngredientes";
             this.txtAddIngredientes.Size = new System.Drawing.Size(203, 26);
             this.txtAddIngredientes.TabIndex = 21;
@@ -164,7 +174,7 @@
             // 
             this.labelAdd_Salario.AutoSize = true;
             this.labelAdd_Salario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdd_Salario.Location = new System.Drawing.Point(2, 179);
+            this.labelAdd_Salario.Location = new System.Drawing.Point(6, 214);
             this.labelAdd_Salario.Name = "labelAdd_Salario";
             this.labelAdd_Salario.Size = new System.Drawing.Size(98, 20);
             this.labelAdd_Salario.TabIndex = 20;
@@ -174,7 +184,7 @@
             // 
             this.labelAdd_Posicao.AutoSize = true;
             this.labelAdd_Posicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdd_Posicao.Location = new System.Drawing.Point(6, 214);
+            this.labelAdd_Posicao.Location = new System.Drawing.Point(10, 249);
             this.labelAdd_Posicao.Name = "labelAdd_Posicao";
             this.labelAdd_Posicao.Size = new System.Drawing.Size(58, 20);
             this.labelAdd_Posicao.TabIndex = 19;
@@ -212,7 +222,7 @@
             // 
             this.labelAdd_Pais.AutoSize = true;
             this.labelAdd_Pais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdd_Pais.Location = new System.Drawing.Point(6, 246);
+            this.labelAdd_Pais.Location = new System.Drawing.Point(10, 281);
             this.labelAdd_Pais.Name = "labelAdd_Pais";
             this.labelAdd_Pais.Size = new System.Drawing.Size(78, 20);
             this.labelAdd_Pais.TabIndex = 16;
@@ -222,7 +232,7 @@
             // 
             this.labelAdd_Cidade.AutoSize = true;
             this.labelAdd_Cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdd_Cidade.Location = new System.Drawing.Point(6, 278);
+            this.labelAdd_Cidade.Location = new System.Drawing.Point(10, 313);
             this.labelAdd_Cidade.Name = "labelAdd_Cidade";
             this.labelAdd_Cidade.Size = new System.Drawing.Size(44, 20);
             this.labelAdd_Cidade.TabIndex = 12;
@@ -248,13 +258,13 @@
             // 
             // btn_AdicionarMenu
             // 
-            this.btn_AdicionarMenu.Location = new System.Drawing.Point(6, 309);
+            this.btn_AdicionarMenu.Location = new System.Drawing.Point(10, 344);
             this.btn_AdicionarMenu.Name = "btn_AdicionarMenu";
             this.btn_AdicionarMenu.Size = new System.Drawing.Size(333, 37);
             this.btn_AdicionarMenu.TabIndex = 0;
             this.btn_AdicionarMenu.Text = "Adicionar";
             this.btn_AdicionarMenu.UseVisualStyleBackColor = true;
-            this.btn_AdicionarMenu.Click += new System.EventHandler(this.btn_AdicionarMenu_Click);
+            this.btn_AdicionarMenu.Click += new System.EventHandler(this.Btn_AdicionarMenu_Click);
             // 
             // groupBox_AlterarMenu
             // 
@@ -273,12 +283,22 @@
             this.groupBox_AlterarMenu.Controls.Add(this.labelAlterar_Cidade);
             this.groupBox_AlterarMenu.Controls.Add(this.textBoxAlterar_Nome);
             this.groupBox_AlterarMenu.Controls.Add(this.labelAlterar_Nome);
-            this.groupBox_AlterarMenu.Location = new System.Drawing.Point(373, 17);
+            this.groupBox_AlterarMenu.Location = new System.Drawing.Point(367, 72);
             this.groupBox_AlterarMenu.Name = "groupBox_AlterarMenu";
-            this.groupBox_AlterarMenu.Size = new System.Drawing.Size(355, 356);
+            this.groupBox_AlterarMenu.Size = new System.Drawing.Size(355, 382);
             this.groupBox_AlterarMenu.TabIndex = 28;
             this.groupBox_AlterarMenu.TabStop = false;
             this.groupBox_AlterarMenu.Text = "Alterar Menu";
+            // 
+            // btnAltUpload
+            // 
+            this.btnAltUpload.Location = new System.Drawing.Point(135, 166);
+            this.btnAltUpload.Name = "btnAltUpload";
+            this.btnAltUpload.Size = new System.Drawing.Size(204, 34);
+            this.btnAltUpload.TabIndex = 30;
+            this.btnAltUpload.Text = "Upload";
+            this.btnAltUpload.UseVisualStyleBackColor = true;
+            this.btnAltUpload.Click += new System.EventHandler(this.BtnAltUpload_Click);
             // 
             // txtAlterarfotografia
             // 
@@ -291,14 +311,14 @@
             // 
             this.pictureBoxAlterarFoto.Location = new System.Drawing.Point(135, 53);
             this.pictureBoxAlterarFoto.Name = "pictureBoxAlterarFoto";
-            this.pictureBoxAlterarFoto.Size = new System.Drawing.Size(173, 83);
+            this.pictureBoxAlterarFoto.Size = new System.Drawing.Size(203, 83);
             this.pictureBoxAlterarFoto.TabIndex = 32;
             this.pictureBoxAlterarFoto.TabStop = false;
             // 
             // comboBoxAlterarCategoria
             // 
             this.comboBoxAlterarCategoria.FormattingEnabled = true;
-            this.comboBoxAlterarCategoria.Location = new System.Drawing.Point(135, 246);
+            this.comboBoxAlterarCategoria.Location = new System.Drawing.Point(135, 281);
             this.comboBoxAlterarCategoria.Name = "comboBoxAlterarCategoria";
             this.comboBoxAlterarCategoria.Size = new System.Drawing.Size(203, 21);
             this.comboBoxAlterarCategoria.TabIndex = 31;
@@ -307,7 +327,7 @@
             // 
             this.checkBoxAlterarAtivo.AutoSize = true;
             this.checkBoxAlterarAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxAlterarAtivo.Location = new System.Drawing.Point(135, 278);
+            this.checkBoxAlterarAtivo.Location = new System.Drawing.Point(135, 313);
             this.checkBoxAlterarAtivo.Name = "checkBoxAlterarAtivo";
             this.checkBoxAlterarAtivo.Size = new System.Drawing.Size(58, 21);
             this.checkBoxAlterarAtivo.TabIndex = 30;
@@ -327,7 +347,7 @@
             // txtAlterarPrecos
             // 
             this.txtAlterarPrecos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlterarPrecos.Location = new System.Drawing.Point(135, 209);
+            this.txtAlterarPrecos.Location = new System.Drawing.Point(135, 244);
             this.txtAlterarPrecos.Name = "txtAlterarPrecos";
             this.txtAlterarPrecos.Size = new System.Drawing.Size(203, 26);
             this.txtAlterarPrecos.TabIndex = 27;
@@ -335,7 +355,7 @@
             // txtAlterarIngredientes
             // 
             this.txtAlterarIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlterarIngredientes.Location = new System.Drawing.Point(135, 174);
+            this.txtAlterarIngredientes.Location = new System.Drawing.Point(135, 209);
             this.txtAlterarIngredientes.Name = "txtAlterarIngredientes";
             this.txtAlterarIngredientes.Size = new System.Drawing.Size(203, 26);
             this.txtAlterarIngredientes.TabIndex = 26;
@@ -344,7 +364,7 @@
             // 
             this.labelAlterar_Salario.AutoSize = true;
             this.labelAlterar_Salario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterar_Salario.Location = new System.Drawing.Point(12, 180);
+            this.labelAlterar_Salario.Location = new System.Drawing.Point(12, 215);
             this.labelAlterar_Salario.Name = "labelAlterar_Salario";
             this.labelAlterar_Salario.Size = new System.Drawing.Size(98, 20);
             this.labelAlterar_Salario.TabIndex = 25;
@@ -354,7 +374,7 @@
             // 
             this.labelAlterar_Posicao.AutoSize = true;
             this.labelAlterar_Posicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterar_Posicao.Location = new System.Drawing.Point(12, 209);
+            this.labelAlterar_Posicao.Location = new System.Drawing.Point(12, 244);
             this.labelAlterar_Posicao.Name = "labelAlterar_Posicao";
             this.labelAlterar_Posicao.Size = new System.Drawing.Size(58, 20);
             this.labelAlterar_Posicao.TabIndex = 24;
@@ -362,19 +382,19 @@
             // 
             // btn_AlterarMenu
             // 
-            this.btn_AlterarMenu.Location = new System.Drawing.Point(7, 306);
+            this.btn_AlterarMenu.Location = new System.Drawing.Point(7, 341);
             this.btn_AlterarMenu.Name = "btn_AlterarMenu";
             this.btn_AlterarMenu.Size = new System.Drawing.Size(332, 32);
             this.btn_AlterarMenu.TabIndex = 21;
             this.btn_AlterarMenu.Text = "Alterar";
             this.btn_AlterarMenu.UseVisualStyleBackColor = true;
-            this.btn_AlterarMenu.Click += new System.EventHandler(this.btn_AlterarMenu_Click);
+            this.btn_AlterarMenu.Click += new System.EventHandler(this.Btn_AlterarMenu_Click);
             // 
             // labelAlterar_Pais
             // 
             this.labelAlterar_Pais.AutoSize = true;
             this.labelAlterar_Pais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterar_Pais.Location = new System.Drawing.Point(11, 244);
+            this.labelAlterar_Pais.Location = new System.Drawing.Point(11, 279);
             this.labelAlterar_Pais.Name = "labelAlterar_Pais";
             this.labelAlterar_Pais.Size = new System.Drawing.Size(78, 20);
             this.labelAlterar_Pais.TabIndex = 19;
@@ -384,7 +404,7 @@
             // 
             this.labelAlterar_Cidade.AutoSize = true;
             this.labelAlterar_Cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterar_Cidade.Location = new System.Drawing.Point(11, 276);
+            this.labelAlterar_Cidade.Location = new System.Drawing.Point(11, 311);
             this.labelAlterar_Cidade.Name = "labelAlterar_Cidade";
             this.labelAlterar_Cidade.Size = new System.Drawing.Size(44, 20);
             this.labelAlterar_Cidade.TabIndex = 15;
@@ -412,7 +432,7 @@
             // 
             this.groupBox_ListaMenu.Controls.Add(this.btn_ApagarMenu);
             this.groupBox_ListaMenu.Controls.Add(this.listBox_Menu);
-            this.groupBox_ListaMenu.Location = new System.Drawing.Point(138, 379);
+            this.groupBox_ListaMenu.Location = new System.Drawing.Point(142, 460);
             this.groupBox_ListaMenu.Name = "groupBox_ListaMenu";
             this.groupBox_ListaMenu.Size = new System.Drawing.Size(399, 221);
             this.groupBox_ListaMenu.TabIndex = 27;
@@ -423,11 +443,11 @@
             // 
             this.btn_ApagarMenu.Location = new System.Drawing.Point(330, 20);
             this.btn_ApagarMenu.Name = "btn_ApagarMenu";
-            this.btn_ApagarMenu.Size = new System.Drawing.Size(49, 186);
+            this.btn_ApagarMenu.Size = new System.Drawing.Size(63, 186);
             this.btn_ApagarMenu.TabIndex = 1;
             this.btn_ApagarMenu.Text = "Apagar";
             this.btn_ApagarMenu.UseVisualStyleBackColor = true;
-            this.btn_ApagarMenu.Click += new System.EventHandler(this.btn_ApagarMenu_Click);
+            this.btn_ApagarMenu.Click += new System.EventHandler(this.Btn_ApagarMenu_Click);
             // 
             // listBox_Menu
             // 
@@ -436,37 +456,19 @@
             this.listBox_Menu.Name = "listBox_Menu";
             this.listBox_Menu.Size = new System.Drawing.Size(317, 186);
             this.listBox_Menu.TabIndex = 0;
-            // 
-            // btnAltUpload
-            // 
-            this.btnAltUpload.Location = new System.Drawing.Point(313, 49);
-            this.btnAltUpload.Name = "btnAltUpload";
-            this.btnAltUpload.Size = new System.Drawing.Size(36, 87);
-            this.btnAltUpload.TabIndex = 30;
-            this.btnAltUpload.Text = "U\r\np\r\nl\r\no\r\na\r\nd\r\n";
-            this.btnAltUpload.UseVisualStyleBackColor = true;
-            this.btnAltUpload.Click += new System.EventHandler(this.btnAltUpload_Click);
-            // 
-            // btnAddUpload
-            // 
-            this.btnAddUpload.Location = new System.Drawing.Point(313, 54);
-            this.btnAddUpload.Name = "btnAddUpload";
-            this.btnAddUpload.Size = new System.Drawing.Size(36, 87);
-            this.btnAddUpload.TabIndex = 32;
-            this.btnAddUpload.Text = "U\r\np\r\nl\r\no\r\na\r\nd\r\n";
-            this.btnAddUpload.UseVisualStyleBackColor = true;
-            this.btnAddUpload.Click += new System.EventHandler(this.btnAddUpload_Click);
+            this.listBox_Menu.SelectedIndexChanged += new System.EventHandler(this.ListBox_Menu_SelectedIndexChanged);
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 612);
+            this.ClientSize = new System.Drawing.Size(730, 687);
             this.Controls.Add(this.groupBox_RegistarMenu);
             this.Controls.Add(this.groupBox_AlterarMenu);
             this.Controls.Add(this.groupBox_ListaMenu);
             this.Name = "MenuForm";
-            this.Text = "MenuForm";
+            this.Text = "Restaurante Menu";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.groupBox_RegistarMenu.ResumeLayout(false);
             this.groupBox_RegistarMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAddFoto)).EndInit();

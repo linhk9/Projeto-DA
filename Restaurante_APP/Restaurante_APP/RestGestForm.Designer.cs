@@ -39,6 +39,7 @@
             this.pedidosButton = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.menusButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +112,7 @@
             // 
             this.pedidosButton.Location = new System.Drawing.Point(6, 144);
             this.pedidosButton.Name = "pedidosButton";
-            this.pedidosButton.Size = new System.Drawing.Size(431, 45);
+            this.pedidosButton.Size = new System.Drawing.Size(213, 45);
             this.pedidosButton.TabIndex = 3;
             this.pedidosButton.Text = "Pedidos";
             this.pedidosButton.UseVisualStyleBackColor = true;
@@ -130,11 +131,22 @@
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
             // 
+            // menusButton
+            // 
+            this.menusButton.Location = new System.Drawing.Point(225, 144);
+            this.menusButton.Name = "menusButton";
+            this.menusButton.Size = new System.Drawing.Size(213, 45);
+            this.menusButton.TabIndex = 4;
+            this.menusButton.Text = "Menus";
+            this.menusButton.UseVisualStyleBackColor = true;
+            this.menusButton.Click += new System.EventHandler(this.menusButton_Click);
+            // 
             // RestGestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 195);
+            this.ClientSize = new System.Drawing.Size(449, 210);
+            this.Controls.Add(this.menusButton);
             this.Controls.Add(this.pedidosButton);
             this.Controls.Add(this.gestaoGlobalDeRestaurantesButton);
             this.Controls.Add(this.gestaoDeClientesButton);
@@ -165,6 +177,7 @@
         private System.Windows.Forms.Button pedidosButton;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+        private System.Windows.Forms.Button menusButton;
     }
 }
 

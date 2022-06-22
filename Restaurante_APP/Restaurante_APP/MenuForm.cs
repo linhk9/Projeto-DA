@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,14 +12,26 @@ using System.Windows.Forms;
 
 namespace Restaurante_APP
 {
-    public partial class MenuForm : Form
+    public partial class MenuForm : MaterialForm
     {
-        public static Menu menu;
+        readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         public static RestauranteAPPContainer restauranteAPP;
-        public MenuForm(Menu menu)
+
+        public MenuForm()
         {
+            InitializeComponent();
+            materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.EnforceBackcolorOnAllComponents = true;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Indigo200, MaterialSkin.TextShade.WHITE);
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            restauranteAPP = new RestauranteAPPContainer();
             LerDadosMenus();
-            Categorias();
+            LerCategorias();
             InitializeComponent();
         }
 
@@ -28,10 +41,9 @@ namespace Restaurante_APP
             listBox_Menu.Refresh();
         }
 
-        public void Categorias()
+        public void LerCategorias()
         {
             List<CategoriaSet> Categorias = restauranteAPP.CategoriaSet.OfType<CategoriaSet>().ToList();
-
             List<CategoriaSet> CategoriasSelecionadas = new List<CategoriaSet>();
 
             foreach (CategoriaSet categoria in Categorias)
@@ -46,20 +58,27 @@ namespace Restaurante_APP
             comboBoxAlterarCategoria.DataSource = CategoriasSelecionadas;
         }
 
-        private void btn_AdicionarMenu_Click(object sender, EventArgs e)
+        private bool VerificarTexto(string texto)
         {
-            if (textBoxAdd_Nome.Text != "" && txtAddfotografia.Text != "" && txtAddIngredientes.Text != "" && txtAddPrecos.Text != "" && checkBoxAddAtivo.Checked == true)
+            return String.IsNullOrEmpty(texto);
+        }
+
+        private void Btn_AdicionarMenu_Click(object sender, EventArgs e)
+        {
+            if (!(VerificarTexto(textBoxAdd_Nome.Text) && VerificarTexto(txtAddfotografia.Text) && VerificarTexto(txtAddIngredientes.Text) && VerificarTexto(txtAddPrecos.Text)) && checkBoxAddAtivo.Checked == true)
             {
                 CategoriaSet categoria = (CategoriaSet)comboBoxAddCategoria.SelectedItem;
 
-                ItemMenuSet itens = new ItemMenuSet();
-                itens.Nome = textBoxAdd_Nome.Text;
-                itens.Fotografia = txtAddfotografia.Text;
-                itens.Ingredientes = txtAddIngredientes.Text;
-                itens.CategoriaIdCategoria = categoria.IdCategoria;
-                itens.Ativo =
+                ItemMenuSet itens = new ItemMenuSet
+                {
+                    Nome = textBoxAdd_Nome.Text,
+                    Fotografia = txtAddfotografia.Text,
+                    Ingredientes = txtAddIngredientes.Text,
+                    CategoriaIdCategoria = categoria.IdCategoria,
+                    Ativo = checkBoxAddAtivo.Checked,
 
-                itens.CategoriaSet = categoria;//aqui erro
+                    CategoriaSet = categoria
+                };
 
                 try
                 {
@@ -67,16 +86,16 @@ namespace Restaurante_APP
                     restauranteAPP.ItemMenuSet.Add(itens);
                     restauranteAPP.SaveChanges();
 
-                    textBoxAdd_Nome.Text = "";
-                    txtAddfotografia.Text = "";
                     checkBoxAddAtivo.Checked = false;
-                    txtAddIngredientes.Text = "";
-                    txtAddPrecos.Text = "";
                     pictureBoxAddFoto.Image = null;
+                    foreach (TextBox textBox in groupBox_RegistarMenu.Controls.OfType<TextBox>())
+                    {
+                        textBox.Text = "";
+                    }
 
                     LerDadosMenus();
                 }
-                catch (Exception ex)
+                catch
                 {
                     MessageBox.Show("Preço inválido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -84,30 +103,30 @@ namespace Restaurante_APP
             }
             else
             {
-                MessageBox.Show("Tem que preencher todos os dados para adicionar o menu!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tens que preencher todos os campos para adicionares o menu!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void btn_AlterarMenu_Click(object sender, EventArgs e)
+        private void Btn_AlterarMenu_Click(object sender, EventArgs e)
         {
-            if (!(textBoxAlterar_Nome.Text != "" && txtAlterarfotografia.Text != "" && txtAlterarIngredientes.Text != "" && txtAlterarPrecos.Text != "" && checkBoxAlterarAtivo.Checked == true))
+            if (!(VerificarTexto(textBoxAlterar_Nome.Text) && VerificarTexto(txtAlterarfotografia.Text) && VerificarTexto(txtAlterarIngredientes.Text) && VerificarTexto(txtAlterarPrecos.Text)) && checkBoxAlterarAtivo.Checked == true)
             {
                 CategoriaSet categoria = (CategoriaSet)comboBoxAddCategoria.SelectedItem;
 
-                ItemMenuSet Menu = (ItemMenuSet)listBox_Menu.SelectedItem;
-                Menu.Nome = textBoxAlterar_Nome.Text;
-                Menu.Fotografia = txtAlterarfotografia.Text;
-                Menu.Ingredientes = txtAlterarIngredientes.Text;
-                Menu.CategoriaIdCategoria = categoria.IdCategoria;
-                Menu.Ativo = checkBoxAlterarAtivo.Checked;
+                ItemMenuSet menu = (ItemMenuSet)listBox_Menu.SelectedItem;
+                menu.Nome = textBoxAlterar_Nome.Text;
+                menu.Fotografia = txtAlterarfotografia.Text;
+                menu.Ingredientes = txtAlterarIngredientes.Text;
+                menu.CategoriaIdCategoria = categoria.IdCategoria;
+                menu.Ativo = checkBoxAlterarAtivo.Checked;
 
                 try
                 {
-                    Menu.Precos = float.Parse(txtAlterarPrecos.Text);
+                    menu.Precos = float.Parse(txtAlterarPrecos.Text);
                     restauranteAPP.SaveChanges();
                     LerDadosMenus();
                 }
-                catch (Exception ex)
+                catch
                 {
                     MessageBox.Show("Preço inválido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -117,52 +136,77 @@ namespace Restaurante_APP
                 MessageBox.Show("Preenche todos os campos para poderes alterar!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void btn_ApagarMenu_Click(object sender, EventArgs e)
+        private void Btn_ApagarMenu_Click(object sender, EventArgs e)
         {
-            ItemMenuSet Menu = (ItemMenuSet)listBox_Menu.SelectedItem;
+            ItemMenuSet menu = (ItemMenuSet)listBox_Menu.SelectedItem;
 
-            restauranteAPP.ItemMenuSet.Remove(Menu);
+            restauranteAPP.ItemMenuSet.Remove(menu);
             restauranteAPP.SaveChanges();
             LerDadosMenus();
         }
-        public string ConverterImagem64(String imagem)
+
+        public string ConverterImagemParaBase64(Image file)
         {
-            byte[] imageBytes = System.IO.File.ReadAllBytes(imagem);
-            Image imagem64;
-            using (MemoryStream ms = new MemoryStream(imageBytes))
+            using (MemoryStream memoryStream = new MemoryStream())
             {
-                imagem64 = Image.FromStream(ms);
+                file.Save(memoryStream, file.RawFormat);
+                byte[] imageBytes = memoryStream.ToArray();
+                return Convert.ToBase64String(imageBytes);
             }
-             return imagem64;//falta Verificar o pq de nao deixar converter
         }
 
-        private void btnAddUpload_Click(object sender, EventArgs e)
+        public Image ConverterBase64ParaImagem(string base64String)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp)|*.jpg; *.png; *.jpeg; *.gif; *.bmp";
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            using (MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
+            {
+                ms.Write(imageBytes, 0, imageBytes.Length);
+                return Image.FromStream(ms, true);
+            }
+        }
+
+        private void BtnAddUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog
+            {
+                Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp)|*.jpg; *.png; *.jpeg; *.gif; *.bmp"
+            };
             if (open.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxAddFoto.Image = new Bitmap(open.FileName);
                 using (Image imagem = pictureBoxAddFoto.Image.Clone() as Image)
                 {
-                    txtAddfotografia.Text = ConverterImagem64(imagem);//falta Verificar o pq de nao deixar converter
+                    txtAddfotografia.Text = ConverterImagemParaBase64(imagem);
                 }
             }
-
         }
 
-        private void btnAltUpload_Click(object sender, EventArgs e)
+        private void BtnAltUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp)|*.jpg; *.png; *.jpeg; *.gif; *.bmp";
+            OpenFileDialog open = new OpenFileDialog
+            {
+                Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp)|*.jpg; *.png; *.jpeg; *.gif; *.bmp"
+            };
             if (open.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxAlterarFoto.Image = new Bitmap(open.FileName);
                 using (Image imagem = pictureBoxAlterarFoto.Image.Clone() as Image)
                 {
-                    txtAlterarfotografia.Text = ConverterImagem64(imagem);//falta Verificar o pq de nao deixar converter
+                    txtAlterarfotografia.Text = ConverterImagemParaBase64(imagem);
                 }
             }
+        }
+
+        private void ListBox_Menu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ItemMenuSet itemMenu = (ItemMenuSet)listBox_Menu.SelectedItem;
+            comboBoxAlterarCategoria.SelectedItem = itemMenu.CategoriaSet.Nome;
+            textBoxAlterar_Nome.Text = itemMenu.Nome;
+            txtAlterarIngredientes.Text = itemMenu.Ingredientes;
+            txtAlterarPrecos.Text = itemMenu.Precos.ToString();
+            txtAlterarfotografia.Text = itemMenu.Fotografia;
+            pictureBoxAlterarFoto.Image = ConverterBase64ParaImagem(itemMenu.Fotografia);
+            checkBoxAlterarAtivo.Checked = itemMenu.Ativo;
         }
     }
 }   

@@ -189,9 +189,8 @@ namespace Restaurante_APP
         {
             if (listboxMenusIndividual.Items.Count > 0)
             {
-                Menu menu = (Menu)listboxMenusIndividual.SelectedItem;
-                MenuForm menus = new MenuForm(menu);
-                menus.ShowDialog();
+                MenuForm menuForm = new MenuForm();
+                menuForm.ShowDialog();
             }
         }
     }

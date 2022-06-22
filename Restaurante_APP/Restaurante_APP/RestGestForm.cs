@@ -59,5 +59,11 @@ namespace Restaurante_APP
             PedidosForm pedidosForm = new PedidosForm();
             pedidosForm.ShowDialog();
         }
+
+        private void menusButton_Click(object sender, EventArgs e)
+        {
+            MenuForm menusForm = new MenuForm();
+            menusForm.ShowDialog();
+        }
     }
 }

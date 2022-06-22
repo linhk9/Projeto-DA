@@ -28,7 +28,7 @@ namespace Restaurante_APP
 
         private void Pedidos_Load(object sender, EventArgs e)
         {
-
+            restauranteAPP = new RestauranteAPPContainer();
         }
     }
 }

@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidosForm));
             this.SuspendLayout();
             // 
-            // Pedidos
+            // PedidosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 514);
+            this.ClientSize = new System.Drawing.Size(803, 597);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Pedidos";
+            this.Name = "PedidosForm";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Pedidos_Load);
             this.ResumeLayout(false);
