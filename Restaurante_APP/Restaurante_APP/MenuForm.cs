@@ -65,40 +65,31 @@ namespace Restaurante_APP
 
         private void Btn_AdicionarMenu_Click(object sender, EventArgs e)
         {
-            if (!(VerificarTexto(textBoxAdd_Nome.Text) && VerificarTexto(txtAddfotografia.Text) && VerificarTexto(txtAddIngredientes.Text) && VerificarTexto(txtAddPrecos.Text)) && checkBoxAddAtivo.Checked == true)
+            if (textBoxAdd_Nome.Text == "" && txtAddIngredientes.Text == "" && txtAddPrecos.Text == "")
             {
                 CategoriaSet categoria = (CategoriaSet)comboBoxAddCategoria.SelectedItem;
 
                 ItemMenuSet itens = new ItemMenuSet
                 {
                     Nome = textBoxAdd_Nome.Text,
-                    Fotografia = txtAddfotografia.Text,
+                    Fotografia = "",
                     Ingredientes = txtAddIngredientes.Text,
                     CategoriaIdCategoria = categoria.IdCategoria,
                     Ativo = checkBoxAddAtivo.Checked,
-
-                    CategoriaSet = categoria
+                    Precos = double.Parse(txtAddPrecos.Text)
                 };
 
-                try
+                itens.CategoriaSet = categoria;
+
+                restauranteAPP.ItemMenuSet.Add(itens);
+                restauranteAPP.SaveChanges();
+                LerDadosMenus();
+
+                checkBoxAddAtivo.Checked = false;
+                pictureBoxAddFoto.Image = null;
+                foreach (TextBox textBox in groupBox_RegistarMenu.Controls.OfType<TextBox>())
                 {
-                    itens.Precos = float.Parse(txtAddPrecos.Text);
-                    restauranteAPP.ItemMenuSet.Add(itens);
-                    restauranteAPP.SaveChanges();
-
-                    checkBoxAddAtivo.Checked = false;
-                    pictureBoxAddFoto.Image = null;
-                    foreach (TextBox textBox in groupBox_RegistarMenu.Controls.OfType<TextBox>())
-                    {
-                        textBox.Text = "";
-                    }
-
-                    LerDadosMenus();
-                }
-                catch
-                {
-                    MessageBox.Show("Preço inválido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    textBox.Text = "";
                 }
             }
             else
@@ -109,9 +100,9 @@ namespace Restaurante_APP
 
         private void Btn_AlterarMenu_Click(object sender, EventArgs e)
         {
-            if (!(VerificarTexto(textBoxAlterar_Nome.Text) && VerificarTexto(txtAlterarfotografia.Text) && VerificarTexto(txtAlterarIngredientes.Text) && VerificarTexto(txtAlterarPrecos.Text)) && checkBoxAlterarAtivo.Checked == true)
+            if (!(VerificarTexto(textBoxAlterar_Nome.Text) && VerificarTexto(txtAlterarIngredientes.Text) && VerificarTexto(txtAlterarPrecos.Text)))
             {
-                CategoriaSet categoria = (CategoriaSet)comboBoxAddCategoria.SelectedItem;
+                CategoriaSet categoria = (CategoriaSet)comboBoxAlterarCategoria.SelectedItem;
 
                 ItemMenuSet menu = (ItemMenuSet)listBox_Menu.SelectedItem;
                 menu.Nome = textBoxAlterar_Nome.Text;
@@ -119,17 +110,10 @@ namespace Restaurante_APP
                 menu.Ingredientes = txtAlterarIngredientes.Text;
                 menu.CategoriaIdCategoria = categoria.IdCategoria;
                 menu.Ativo = checkBoxAlterarAtivo.Checked;
+                menu.Precos = float.Parse(txtAlterarPrecos.Text);
 
-                try
-                {
-                    menu.Precos = float.Parse(txtAlterarPrecos.Text);
-                    restauranteAPP.SaveChanges();
-                    LerDadosMenus();
-                }
-                catch
-                {
-                    MessageBox.Show("Preço inválido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                restauranteAPP.SaveChanges();
+                LerDadosMenus();
             }
             else
             {
